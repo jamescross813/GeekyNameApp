@@ -15,7 +15,8 @@ class App extends Component {
         <div className="App">
       
           {/* login form conponent*/}
-          <LoginForm exact path = "/" handleLogin={this.login}/>
+          <loginForm />
+          <Route exact path = "/" handleLogin={this.login}/>
           {/* homepage presentation component */}
    
         </div>
