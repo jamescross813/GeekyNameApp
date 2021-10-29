@@ -10,6 +10,8 @@ class Homepage extends Component{
             <h1>Geeky Name App</h1>
             <Link to= "/signup" exact >Sign up</Link>
             <Link to= "/login" exact >Login</Link>
+            <h4>About us</h4>
+            <p>This app is a way for geeks and nerds to share events and availabilty to ensure games happen and geeks stay united.</p>
 
         </div>
         )
