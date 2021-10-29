@@ -3,7 +3,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      App
+      {/* login form conponent*/}
+      {/* homepage presentation companonet */}
     </div>
   );
 }
