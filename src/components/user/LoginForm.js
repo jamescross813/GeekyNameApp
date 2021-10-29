@@ -12,6 +12,11 @@ import React, { Component } from 'react';
 
 class LoginForm extends Component {
 
+    state = {
+        username: "",
+        password: ""
+    }
+
     render() {  
         return (
           <form>
