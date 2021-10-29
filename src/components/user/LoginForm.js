@@ -17,11 +17,11 @@ class LoginForm extends Component {
         password: ""
     }
 
-    handleChange = (event) =>{
-        this.setState({
-          text: event.target.value
-        })
-      }
+    // handleChange = (event) =>{
+    //     this.setState({
+    //       text: event.target.value
+    //     })
+    //   }
 
     render() {  
         return (
