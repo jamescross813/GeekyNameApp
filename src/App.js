@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
 import './App.css';
 import LoginForm from "./components/user/LoginForm"
 import UserHomepageContainer from "./containers/user/UserHomepageContainer"
+import Homepage from "./components/homepage/Homepage";
 
 class App extends Component {
 
@@ -14,9 +15,11 @@ class App extends Component {
     return(
       <Router>
         <div className="App">
-          <UserHomepageContainer />
+          
+          
           {/* login form conponent*/}
-          {/* <Route to exact path = "/" render={()=> <LoginForm handleLogin={this.login} />} /> */}
+          <Route to exact path = "/" render={()=><Homepage />}/>
+
           {/* homepage presentation component */}
           {/* <Route to exact path = "/user/1" render={()=> <UserHomepageContainer/>}/> */}
         </div>
