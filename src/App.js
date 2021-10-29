@@ -5,8 +5,8 @@ import LoginForm from "./components/user/LoginForm"
 
 class App extends Component {
 
-  login = (username) =>{
-    console.log(username)
+  login = (formData) =>{
+    console.log(formData.username)
   }
 
   render() {
