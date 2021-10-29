@@ -14,7 +14,7 @@ class App extends Component {
     return(
       <Router>
         <div className="App">
-        <UserHomepageContainer />
+          <UserHomepageContainer />
           {/* login form conponent*/}
           {/* <Route to exact path = "/" render={()=> <LoginForm handleLogin={this.login} />} /> */}
           {/* homepage presentation component */}

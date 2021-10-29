@@ -3,11 +3,12 @@ import { Component } from "react";
 class Homepage extends Component{
 
     render(){
-        return
+        return(
         <div>
             <button>Login</button>
             <button>Signup</button>
         </div>
+        )
     }
 
 }
