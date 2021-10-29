@@ -16,6 +16,7 @@ class App extends Component {
           {/* login form conponent*/}
           <Route to exact path = "/" render={()=> <LoginForm handleLogin={this.login} />} />
           {/* homepage presentation component */}
+          <Route to exact path = "/user/1" render={()=> <HomepageContainer/>}/>
         </div>
       </Router>
     )
