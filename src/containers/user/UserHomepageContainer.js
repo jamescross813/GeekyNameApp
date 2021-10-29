@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class UserHomepageContianer extends Component{
+class UserHomepageContainer extends Component{
 
     render(){
         return(
@@ -11,4 +11,4 @@ class UserHomepageContianer extends Component{
     }
 }
 
-export default UserHomepageContianer
+export default UserHomepageContainer
