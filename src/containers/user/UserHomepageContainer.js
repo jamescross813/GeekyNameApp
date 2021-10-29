@@ -6,7 +6,7 @@ class UserHomepageContainer extends Component{
     render(){
         return(
         <div>
-            <Homepage />
+            
         </div>
         )
     }
