@@ -27,7 +27,8 @@ class LoginForm extends Component {
         event.preventDefault()
         this.login(this.state)
         this.setState({
-          text: ""
+          username: "",
+          password: ""
         })
       }
 
