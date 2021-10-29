@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       {/* login form conponent*/}
-      {/* homepage presentation companonet */}
+      {/* homepage presentation component */}
     </div>
   );
 }
