@@ -8,7 +8,7 @@ import Homepage from "./components/homepage/Homepage";
 class App extends Component {
 
   login = (formData) =>{
-    console.log(formData.username)
+    <UserHomepageContainer props={formData}/>
   }
 
   render() {
