@@ -13,12 +13,11 @@ class App extends Component {
     return(
       <Router>
         <div className="App">
-      
+      <NavLink>
           {/* login form conponent*/}
-          <loginForm />
-          <Route exact path = "/" handleLogin={this.login}/>
+          <Route exact path = "/" component={LoginForm} handleLogin={this.login}/>
           {/* homepage presentation component */}
-   
+   </NavLink>
         </div>
       </Router>
     )
