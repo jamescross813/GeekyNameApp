@@ -25,7 +25,7 @@ class LoginForm extends Component {
 
     handleSubmit = (event) =>{
         event.preventDefault()
-        console.log(this.state)
+        this.login(this.state)
         this.setState({
           text: ""
         })
