@@ -19,7 +19,7 @@ class App extends Component {
           
           {/* login form conponent*/}
           <Route to exact path = "/" render={()=><Homepage />}/>
-
+          <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           {/* homepage presentation component */}
           {/* <Route to exact path = "/user/1" render={()=> <UserHomepageContainer/>}/> */}
         </div>
@@ -31,3 +31,4 @@ class App extends Component {
 }
 
 export default App;
+
