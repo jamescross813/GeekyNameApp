@@ -8,7 +8,8 @@ class Homepage extends Component{
         return(
         <div>
             
-            <Link to= "/signup" exact onCLick={this.renderPage} >Login</Link>
+            <Link to= "/signup" exact >Sign up</Link>
+            <Link to= "/login" exact >Login</Link>
         </div>
         )
     }
