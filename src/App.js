@@ -1,14 +1,16 @@
 import './App.css';
 import LoginForm from "./components/user/LoginForm"
+import React, { Component } from 'react'
 
-function App() {
-  return (
+class App extends Component {
+  render() {
     <div className="App">
       {/* login form conponent*/}
-      <LoginForm />
+      <LoginForm handleLogin={this.login}/>
       {/* homepage presentation component */}
     </div>
-  );
+  ;
+  }
 }
 
 export default App;
