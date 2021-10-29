@@ -14,12 +14,15 @@ class App extends Component {
     return(
       <Router>
         <div className="App">
+        <UserHomepageContainer />
           {/* login form conponent*/}
-          <Route to exact path = "/" render={()=> <LoginForm handleLogin={this.login} />} />
+          {/* <Route to exact path = "/" render={()=> <LoginForm handleLogin={this.login} />} /> */}
           {/* homepage presentation component */}
-          <Route to exact path = "/user/1" render={()=> <UserHomepageContainer/>}/>
+          {/* <Route to exact path = "/user/1" render={()=> <UserHomepageContainer/>}/> */}
         </div>
+        
       </Router>
+      
     )
   }
 }
