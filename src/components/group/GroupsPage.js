@@ -3,7 +3,7 @@ import React from "react";
 const GroupsPage = () =>{
     return(
         <div>
-            GroupsPage
+            <h3>Groups Page</h3>
         </div>
     )
 }
