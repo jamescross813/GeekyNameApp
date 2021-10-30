@@ -8,6 +8,12 @@ class FriendsListContainer extends Component{
 
     componentDidMount(){
         fetch("http://localhost:3000/friends")
+        .then(resp=>resp.json())
+        .then(data=>{
+            this.setState({
+                friends: data
+            })
+        })
     }
 
     render(){
