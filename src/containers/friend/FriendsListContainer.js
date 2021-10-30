@@ -3,9 +3,11 @@ import FriendsList from "../../components/friend/FriendsList";
 
 class FriendsListContainer extends Component{
     render(){
+        return(
         <div>
             <FriendsList />
         </div>
+        )
     }
 }
 
