@@ -22,7 +22,7 @@ class FriendsListContainer extends Component{
     render(){
         return(
         <div>
-            <FriendsList />
+            {this.renderList()}
         </div>
         )
     }

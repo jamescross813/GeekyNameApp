@@ -23,7 +23,7 @@ class GroupsListContainer extends Component{
     render(){
         return(
         <div>
-            <GroupsList />
+            {this.renderList()}
         </div>
         )
     }
