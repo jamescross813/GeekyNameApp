@@ -1,13 +1,13 @@
 // include navbar
 // render friends, groups, events, avialability
 import { Component } from "react";
-// import NavBar from "../navbar/NavBar";
+import NavBar from "../navbar/NavBar";
 
 class UserHomepage extends Component{
     render(){
         return(
         <div>
-            {/* <NavBar /> */}
+            <NavBar />
                 This Page
         </div>
         )
