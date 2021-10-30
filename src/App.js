@@ -23,7 +23,7 @@ class App extends Component {
           <Route to path="/user/1" render={()=><UserHomepageContainer />} />
           <Route to path="/groups" render={()=><GroupsPageContainer />} />
           <Route to path="/friends" render={()=><FriendsPageContainer />}/>
-          <Route to path="/events" />
+          <Route to path="/events" render={()=><EventsPageContainer />}/>
           <Route to path="/availability" />
         </div>
       </Router>
