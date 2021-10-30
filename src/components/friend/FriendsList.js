@@ -4,7 +4,9 @@ const FriendsList = ()=>{
     return(
     <div>
         <ul>
-            FriendsList
+            <li>
+                Friends List
+            </li>
         </ul>
     </div>
     )
