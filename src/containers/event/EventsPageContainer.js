@@ -1,4 +1,5 @@
 import { Component } from "react";
+import EventsList from "../../components/event/EventsList";
 import EventsPage from "../../components/event/EventsPage"
 
 class EventsPageContainer extends Component{
@@ -6,6 +7,7 @@ class EventsPageContainer extends Component{
         return(
             <div>
                 <EventsPage />
+                <EventsList />
             </div>
         )
     }
