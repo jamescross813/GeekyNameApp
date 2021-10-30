@@ -4,6 +4,7 @@ import './App.css';
 import LoginForm from "./components/user/LoginForm"
 import UserHomepageContainer from "./containers/user/UserHomepageContainer"
 import Homepage from "./components/homepage/Homepage";
+import NavBar from "./components/navbar/NavBar";
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return(
       <Router>
+        <NavBar />
         <div className="App">
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
