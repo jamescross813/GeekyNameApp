@@ -4,9 +4,11 @@ import { Component } from "react";
 
 class UserHomepage extends Component{
     render(){
+        return(
         <div>
                 This Page
         </div>
+        )
     }
 }
 
