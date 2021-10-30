@@ -17,6 +17,9 @@ class GroupsListContainer extends Component{
         })
     }
 
+    renderList=()=>
+    this.state.groups.map((group)=>(<GroupsList group = {group} />))
+
     render(){
         return(
         <div>
