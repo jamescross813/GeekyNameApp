@@ -6,7 +6,9 @@ class FriendsListContainer extends Component{
         friends: []
     }
 
-    
+    componentDidMount(){
+        fetch("http://localhost:3000/friends")
+    }
 
     render(){
         return(
