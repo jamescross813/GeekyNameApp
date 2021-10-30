@@ -15,9 +15,6 @@ class App extends Component {
     return(
       <Router>
         <div className="App">
-          
-          
-          {/* login form conponent*/}
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
