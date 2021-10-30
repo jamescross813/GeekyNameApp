@@ -5,7 +5,7 @@ class EventContainer extends Component{
     render(){
         return(
             <div>
-                
+                <EventPage />
             </div>
         )
     }
