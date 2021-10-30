@@ -16,10 +16,13 @@ class UserHomepage extends Component{
             <NavBar />
             <h2>Welcome</h2>
             {/* <EventsPageContainer /> */}
+            <h3>My Events</h3>
             <EventsListContainer />
             {/* <FriendsPageContainer /> */}
+            <h3>My Friends</h3>
             <FriendsListContainer />
             {/* <GroupsPageContainer /> */}
+            <h3>My Groups</h3>
             <GroupsListContainer />
         </div>
         )
