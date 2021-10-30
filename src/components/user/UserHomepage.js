@@ -5,7 +5,7 @@ import { Component } from "react";
 class UserHomepage extends Component{
     render(){
         <div>
-
+                This Page
         </div>
     }
 }
