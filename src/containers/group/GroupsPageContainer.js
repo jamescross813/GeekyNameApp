@@ -5,7 +5,7 @@ class GroupsPageContainer extends Component{
     render(){
         return(
             <div>
-                
+                <GroupsPage />
             </div>
         )
     }
