@@ -5,7 +5,7 @@ class FriendsPageContainer extends Component{
     render(){
         return(
             <div>
-                
+                <FriendsPage />
             </div>
         )
     }
