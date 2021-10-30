@@ -17,7 +17,6 @@ class App extends Component {
   render() {
     return(
       <Router>
-        
         <div className="App">
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
