@@ -4,7 +4,9 @@ const EventsList = ()=>{
     return(
     <div>
         <ul>
-            Events List
+            <li>
+                Events List
+            </li>
         </ul>
     </div>
     )
