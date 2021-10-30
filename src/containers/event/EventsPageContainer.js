@@ -5,7 +5,7 @@ class EventsPageContainer extends Component{
     render(){
         return(
             <div>
-
+                <EventsPage />
             </div>
         )
     }
