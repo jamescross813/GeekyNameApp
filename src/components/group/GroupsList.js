@@ -3,7 +3,11 @@ import React from "react";
 const GroupsList = ()=>{
     return(
     <div>
-        GroupsList
+        <ul>
+            <li>
+                Groups List
+            </li>
+        </ul>
     </div>
     )
 }
