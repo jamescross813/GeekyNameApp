@@ -3,22 +3,26 @@ import EventsList from "../../components/event/EventsList";
 
 class EventsListContainer extends Component{
     state={
-        event_name: "",
-        description:"",
-        est_time: "",
-        game_type: ""
+        events:[]
     }
 
     componentDidMount(){
         fetch("http://localhost:3000/events")
         .then(resp=>resp.json())
-        .then(data=> console.log(data))
+        .then(data=> {
+            this.setState({
+                events: data
+            })
+        })
     }
 
     render(){
+        
         return(
+            
         <div>
-            <EventsList />
+            {console.log(this.state.evemnts)}
+            {/* <EventsList /> */}
         </div>
         )
     }
