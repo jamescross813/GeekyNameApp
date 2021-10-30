@@ -14,6 +14,7 @@ class UserHomepage extends Component{
         return(
         <div>
             <NavBar />
+            <h2>Welcome</h2>
             <EventsPageContainer />
             <EventsListContainer />
             <FriendsPageContainer />
