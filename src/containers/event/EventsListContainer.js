@@ -16,9 +16,10 @@ class EventsListContainer extends Component{
         })
     }
 
-    renderList(){
-        this.state.events.map((event)=><EventsList event = {event} />)
-    }
+    renderList=()=>
+        this.state.events.map((event)=>(<EventsList event = {event} />)
+        )
+    
 
     render(){
         
