@@ -3,7 +3,7 @@ import React from "react";
 const EventsPage = ()=>{
     return(
     <div>
-        EventsPage
+        <h3>EventsPage</h3>
     </div>
     )
 }
