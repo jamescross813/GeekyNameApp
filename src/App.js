@@ -21,9 +21,9 @@ class App extends Component {
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
-          <Route to path="/user/1" render={()=><UserHomepageContainer />} />
-          <Route to path="/groups" render={()=><GroupsPageContainer />} />
-          <Route to path="/friends" render={()=><FriendsPageContainer />}/>
+          <Route to path="/user/1" render={routerprops=><UserHomepageContainer {...routerprops}/>} />
+          <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
+          <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
           <Route to path="/availability" />
 
