@@ -5,7 +5,8 @@ import NavBar from "../navbar/NavBar";
 import EventsListContainer from "../../containers/event/EventsListContainer"
 import FriendsListContainer from "../../containers/friend/FriendsListContainer"
 import GroupsListContainer from "../../containers/group/GroupsListContainer"
-import EventsPageContainer from "../../containers/event/EventsPageContainer";
+import EventsPageContainer from "../../containers/event/EventsPageContainer"
+import FriendsPageContainer from "../../containers/friend/FriendsPageContainer";
 
 class UserHomepage extends Component{
     render(){
@@ -13,6 +14,7 @@ class UserHomepage extends Component{
         <div>
             <NavBar />
             <EventsPageContainer />
+            <FriendsPageContainer />
             
             <EventsListContainer />
             <FriendsListContainer />
