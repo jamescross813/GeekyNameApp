@@ -41,7 +41,7 @@ class LoginForm extends Component {
               <label>Password</label><br/>
               <input type="password" name="password" value={this.state.password} onChange={this.handleChange} /><br/>
               <Link to="/user/1">
-              <input type="submit" />
+                <input type="submit" />
               </Link>
           </form>
         );
