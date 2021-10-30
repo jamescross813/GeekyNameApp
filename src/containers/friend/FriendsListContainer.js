@@ -16,6 +16,9 @@ class FriendsListContainer extends Component{
         })
     }
 
+    renderList=()=>
+        this.state.friends.map((friend)=>(<FriendsList friend = {friend} />))
+
     render(){
         return(
         <div>
