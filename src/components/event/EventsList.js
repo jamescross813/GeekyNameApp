@@ -1,11 +1,11 @@
 import React from "react";
 
-const EventsList = ()=>{
+const EventsList = ({event})=>{
     return(
     <div>
         <ul>
             <li>
-                Events List
+                {event.event_name}
             </li>
         </ul>
     </div>
