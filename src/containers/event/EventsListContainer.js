@@ -9,7 +9,12 @@ class EventsListContainer extends Component{
         game_type: ""
     }
 
-   
+    componentDidMount(){
+        fetch("http://localhost:3000/events")
+        .then(resp=>resp.json())
+        .then(data=> console.log(data))
+    }
+
     render(){
         return(
         <div>
