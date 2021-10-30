@@ -4,6 +4,7 @@ import { Component } from "react";
 import NavBar from "../navbar/NavBar";
 import EventsListContainer from "../../containers/event/EventsListContainer"
 import FriendsListContainer from "../../containers/friend/FriendsListContainer"
+import GroupsListContainer from "../../containers/group/GroupsListContainer";
 
 class UserHomepage extends Component{
     render(){
@@ -12,6 +13,7 @@ class UserHomepage extends Component{
             <NavBar />
             <EventsListContainer />
             <FriendsListContainer />
+            <GroupsListContainer />
         </div>
         )
     }
