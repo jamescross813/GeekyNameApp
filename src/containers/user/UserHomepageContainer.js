@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserHomepage from "../components/UserHomepage"
+import UserHomepage from "../../components/user/UserHomepage"
 
 class UserHomepageContainer extends Component{
 
