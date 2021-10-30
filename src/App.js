@@ -15,11 +15,12 @@ class App extends Component {
   render() {
     return(
       <Router>
-        <NavBar />
+        
         <div className="App">
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
+          <NavBar />
           <Route to path="/user/1" render={()=><UserHomepageContainer />} />
           <Route to path="/groups"/>
           <Route to path="/friends" />
