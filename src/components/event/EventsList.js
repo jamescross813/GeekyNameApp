@@ -3,7 +3,9 @@ import React from "react";
 const EventsList = ()=>{
     return(
     <div>
-        EventsList
+        <ul>
+            Events List
+        </ul>
     </div>
     )
 }
