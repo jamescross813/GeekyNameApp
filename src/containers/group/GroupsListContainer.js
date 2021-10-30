@@ -1,5 +1,5 @@
 import { Component } from "react";
-import GroupsList from  "../../components/GroupsList"
+import GroupsList from  "../../components/group/GroupsList"
 
 class GroupsListContainer extends Component{
     render(){
