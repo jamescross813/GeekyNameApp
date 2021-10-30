@@ -24,7 +24,6 @@ class App extends Component {
           <Route to path="/events" />
           <Route to path="/availability" />
         </div>
-        
       </Router>
       
     )
