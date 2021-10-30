@@ -8,7 +8,7 @@ class UserHomepage extends Component{
         return(
         <div>
             <NavBar />
-            <EventsList />
+            <EventsListContainer />
         </div>
         )
     }
