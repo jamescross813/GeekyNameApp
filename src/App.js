@@ -11,8 +11,27 @@ import EventsPageContainer from "./containers/event/EventsPageContainer"
 class App extends Component {
 
   login = (formData) =>{
-    console.log(formData.username)
+    this.fetchSession(formData)
   }
+
+  fetchSession(formData){
+    fetch("http://localhost:3000/login",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+    },
+    body: JSON.stringify({
+      user: {
+        username: formData.username,
+        password: formData.password,
+      },
+    }),
+  })
+    .then((r) => console.log(r))
+    // .then(data=>console.log(data));
+    }
+  
 
   render() {
     return(
