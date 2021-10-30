@@ -21,7 +21,7 @@ class App extends Component {
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to path="/user/1" render={()=><UserHomepageContainer />} />
-          <Route to path="/groups"/>
+          <Route to path="/groups" render={()=><GroupsPageContainer />} />
           <Route to path="/friends" />
           <Route to path="/events" />
           <Route to path="/availability" />
