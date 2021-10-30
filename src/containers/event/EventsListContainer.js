@@ -17,7 +17,7 @@ class EventsListContainer extends Component{
     }
 
     renderList(){
-        this.state.events.map((event)=>console.log(event.event_name))
+        this.state.events.map((event)=><EventsList event = {event} />)
     }
 
     render(){
