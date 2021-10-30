@@ -26,7 +26,7 @@ class EventsListContainer extends Component{
         return(
             
         <div>
-            {this.renderList()}
+            {/* {this.renderList()} */}
             {/* {console.log(this.state.events)} */}
             {/* <EventsList /> */}
         </div>
