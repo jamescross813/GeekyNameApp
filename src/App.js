@@ -8,31 +8,7 @@ import GroupsPageContainer from "./containers/group/GroupsPageContainer"
 import FriendsPageContainer from "./containers/friend/FriendsPageContainer"
 import EventsPageContainer from "./containers/event/EventsPageContainer"
 
-class App extends Component {
-
-  login = (formData) =>{
-    this.fetchSession(formData)
-  }
-
-  fetchSession(formData){
-    console.log(formData)
-    fetch("http://localhost:3000/login",{
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-    },
-    body: JSON.stringify({
-      user: {
-        username: formData.username,
-        password: formData.password,
-      },
-    }),
-  })
-    .then((r) => r.json())
-    .then(data=> <Link to="/user/1" userData={data}/>);
-    }
-  
+class App extends Component {  
 
   render() {
     return(
