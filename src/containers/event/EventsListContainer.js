@@ -34,4 +34,11 @@ class EventsListContainer extends Component{
     }
 }
 
-export default connect()(EventsListContainer)
+const mapStateToProps=(state)=>{
+    return{
+        user: state.user,
+        users: state.users
+    }
+}
+
+export default connect(mapStateToProps)(EventsListContainer)
