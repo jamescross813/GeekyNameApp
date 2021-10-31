@@ -9,6 +9,6 @@ action){
                 user:[...state.user, action.name]
             }
             default:
-                return sate
+                return state
     }
 }
