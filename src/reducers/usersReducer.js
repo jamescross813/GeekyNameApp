@@ -1,12 +1,12 @@
 function usersReducer(state={
-    user:{},
+    users:{},
 },
 action){
     // console.log(action)
     switch(action.type){
         case "ADD_USERS":
             return{
-                user: action.userData
+                users: action.userData
             }
             default:
                 return state
