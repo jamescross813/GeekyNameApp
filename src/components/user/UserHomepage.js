@@ -15,8 +15,8 @@ class UserHomepage extends Component{
         return(
         <div>
             <NavBar />
-            <h2>Welcome {this.props.userInfo.username}!</h2>
-            
+            <h2>Welcome {this.props.userInfo.user.username}!</h2>
+            {/* {console.log(this.props.userInfo.user.username)} */}
             {/* <EventsPageContainer /> */}
             <h3>My Events</h3>
             <EventsListContainer />
