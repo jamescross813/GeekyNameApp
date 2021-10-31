@@ -4,6 +4,7 @@ import UserHomepage from "../../components/user/UserHomepage"
 class UserHomepageContainer extends Component{
 
     render(){
+        console.log(this.props)
         return(
         <div>
             <UserHomepage />
