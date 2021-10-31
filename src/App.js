@@ -9,15 +9,15 @@ import FriendsPageContainer from "./containers/friend/FriendsPageContainer"
 import EventsPageContainer from "./containers/event/EventsPageContainer"
 
 class App extends Component { 
-   
+ 
   render() {
     return(
       <Router>
         <div className="App">
-          <Route to exact path = "/" render={()=><Homepage />}/>
+          <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
           <Route to exact path="/signup" render={routerprops=><LoginForm {...routerprops} handleLogin={this.login} />}/>
-          <Route to exact path="/login" render={routerprops=><LoginForm {...routerprops} />}/>
-          <Route to path="/user" render={routerprops=><UserHomepageContainer {...routerprops} />} />
+          <Route to exact path="/login" render={routerprops=><LoginForm {...routerprops} handleLogin={this.login}/>}/>
+          <Route to path="/user" render={routerprops=><UserHomepageContainer {...routerprops} userData={this.state}/>} />
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
