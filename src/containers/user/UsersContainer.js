@@ -6,7 +6,8 @@ class UsersContainer extends Component{
     fetchUsers=()=>{
         fetch("http://localhost:3000/users")
         .then(r=>r.json())
-        .then(data=>console.log(data))
+        .then(data=>this.props.setUsersInfo(data))
+        .then(console.log())
     }
 
     render(){
@@ -18,7 +19,7 @@ class UsersContainer extends Component{
 
 const mapDispatchToProps=(dispatch)=>{
     return {
-        setUserInfo: (user) => dispatch({
+        setUsersInfo: (user) => dispatch({
           type: "ADD_USER",
           userData: user
         })
