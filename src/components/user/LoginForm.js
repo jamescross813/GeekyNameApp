@@ -15,6 +15,7 @@ import UserHomepageContainer from "../../containers/user/UserHomepageContainer";
 class LoginForm extends Component {
 
     state = {
+        user:{},
         username: "",
         password: ""
     }
@@ -27,7 +28,26 @@ class LoginForm extends Component {
 
     handleSubmit = (event) =>{
         event.preventDefault()
-      this.props.handleLogin(this.state)
+        let loginInfo = {
+                  user: {
+                    username: formData.username,
+                    password: formData.password,
+                  },
+                }
+                let configObj = {
+                  method: "POST",
+                  headers:{
+                      "Content-Type": "application/json",
+                      "Accept": "application/json"
+                  },
+                  body: JSON.stringify(loginInfo)
+                };
+                fetch("http://localhost:3000/login", configObj)
+                  .then((r) => r.json())
+                  .then(data=> this.setState({
+                    user: data
+                  })
+                )    
     }
 
     render() {  
@@ -37,7 +57,9 @@ class LoginForm extends Component {
               <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /><br/>
               <label>Password</label><br/>
               <input type="password" name="password" value={this.state.password} onChange={this.handleChange} /><br/>
+              <Link to= "/user">
               <input type="submit" />
+              </Link>
           </form>
         );
       }

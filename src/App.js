@@ -9,21 +9,6 @@ import FriendsPageContainer from "./containers/friend/FriendsPageContainer"
 import EventsPageContainer from "./containers/event/EventsPageContainer"
 
 class App extends Component { 
-
-  state={
-    user:{}
-  }
-  
-  login = (formData) =>{
-    this.setState({
-      user: formData
-    })
-    this.renderUserHomepage()
-  }
-
-  renderUserHomepage=()=>(
-    <UserHomepageContainer userData={this.state.user}/>
-  )
    
   render() {
     return(
@@ -31,8 +16,8 @@ class App extends Component {
         <div className="App">
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
-          <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
-          {/* <Route to path="/user/1" render={routerprops=><UserHomepageContainer {...routerprops} userData={this.state.user}/>} /> */}
+          <Route to exact path="/login" render={()=><LoginForm />}/>
+          <Route to path="/user" render={routerprops=><UserHomepageContainer {...routerprops} />} />
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
