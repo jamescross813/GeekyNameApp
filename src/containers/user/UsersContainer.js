@@ -30,5 +30,5 @@ const mapStateToProps=(state)=>{
     return(console.log(state))
 }
 
-export default connect(null, mapDispatchToProps)(UsersContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer)
 
