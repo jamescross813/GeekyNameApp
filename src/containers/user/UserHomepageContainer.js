@@ -12,13 +12,16 @@ class UserHomepageContainer extends Component{
         return(
         <div>
           <UserHomepage userInfo={this.props.user}/>
+          {console.log(this.props)}
         </div>
         )
     }
 }
 
 const mapStateToProps=(state)=>{
-    return{user: state.user}
+    return{
+      user: state.user,
+      users: state.users}
   }
 
 export default connect(mapStateToProps)(UserHomepageContainer)
