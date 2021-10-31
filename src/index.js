@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 ReactDOM.render(
   <Provider>
     <App />
-    </Provider>,
+  </Provider>,
   
   document.getElementById('root')
 );
