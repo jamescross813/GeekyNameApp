@@ -4,10 +4,14 @@ import {connect} from "react-redux"
 
 class GroupInputContainer extends Component{
 
+    createGroup=(formData)=>{
+        console.log(formData)
+    }
+
     render(){
         return(
             <div>
-                <GroupInput />
+                <GroupInput handleCreate={this.createGroup}/>
             </div>
         )
     }
