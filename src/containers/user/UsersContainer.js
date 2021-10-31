@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { connect } from "react-redux"
 
 class UsersContainer extends Component{
 
@@ -24,5 +25,5 @@ const mapDispatchToProps=(dispatch)=>{
       };
 }
 
-export default UsersContainer
+export default connect(null, mapDispatchToProps)(UsersContainer)
 
