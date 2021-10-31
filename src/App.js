@@ -15,21 +15,24 @@ class App extends Component {
   }
 
   fetchSession(formData){
-    fetch("http://localhost:3000/login",{
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-    },
-    body: JSON.stringify({
-      user: {
-        username: formData.username,
-        password: formData.password,
-      },
-    }),
-  })
+    // console.log(formData.username)
+    let loginInfo = {
+          user: {
+            username: formData.username,
+            password: formData.password,
+          },
+        }
+        let configObj = {
+          method: "POST",
+          headers:{
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+          },
+          body: JSON.stringify(loginInfo)
+      };
+    fetch("http://localhost:3000/login", configObj)
     .then((r) => r.json())
-    .then(data=> <UserHomepageContainer info={data}/>);
+    .then(data=> console.log(data));
     }
   
 
