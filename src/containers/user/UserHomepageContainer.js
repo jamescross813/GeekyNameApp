@@ -9,7 +9,7 @@ class UserHomepageContainer extends Component{
     }
 
         render(){
-        console.log(this.props)
+        // console.log(this.props)
         return(
         <div>
           Here
@@ -19,9 +19,7 @@ class UserHomepageContainer extends Component{
 }
 
 const mapStateToProps = state =>{
-    return{
-        user: state.user
-    }
+    // console.log(state)
 }
 
 export default connect(mapStateToProps)(UserHomepageContainer)
