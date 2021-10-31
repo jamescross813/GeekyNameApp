@@ -20,10 +20,10 @@ class EventInputContainer extends Component{
             body: JSON.stringify(friendInfo)
           };
           fetch("http://localhost:3000/friends", configObj)
-            // .then((r) => r.json())
-            .then((r)=>console.log(r))
-            // .then(data=>console.log(data))
-            // .then(this.props.history.push("/friends"))
+            .then((r) => r.json())
+            // .then((r)=>console.log(r))
+            .then(data=>console.log(data))
+            .then(this.props.history.push("/friends"))
         }
 
     render(){
