@@ -19,27 +19,27 @@ class App extends Component {
   }
 
   fetchSession(formData){
-  let loginInfo = {
-    user: {
-      username: this.state.username,
-      password: this.state.password,
-    },
+    let loginInfo = {
+      user: {
+        username: formData.username,
+        password: formData.password,
+      },
+    }
+    let configObj = {
+      method: "POST",
+      headers:{
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+      },
+      body: JSON.stringify(loginInfo)
+    };
+    fetch("http://localhost:3000/login", configObj)
+      .then((r) => r.json())
+      .then(data=> this.setState({
+        user: data
+      })
+    )
   }
-  let configObj = {
-    method: "POST",
-    headers:{
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    },
-    body: JSON.stringify(loginInfo)
-};
-fetch("http://localhost:3000/login", configObj)
-.then((r) => r.json())
-.then(data=> this.setState({
-  user: data
-})
-)
-}
 
   render() {
     return(
@@ -48,7 +48,7 @@ fetch("http://localhost:3000/login", configObj)
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
-          <Route to path="/user/1" render={routerprops=><UserHomepageContainer {...routerprops}/>} />
+          <Route to path="/user/1" render={routerprops=><UserHomepageContainer {...routerprops} userData={this.state.user}/>} />
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
