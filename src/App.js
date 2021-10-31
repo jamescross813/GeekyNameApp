@@ -30,7 +30,7 @@ class App extends Component {
     }),
   })
     .then((r) => r.json())
-    .then(data=> console.log(data));
+    .then(data=> <Link to="/user/1" userData={data}/>);
     }
   
 
