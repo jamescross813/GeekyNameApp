@@ -4,3 +4,9 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.navbar{
+  width: 350px;
+  background-color: cadetblue;
+  padding: 0 20px;
+}
+
