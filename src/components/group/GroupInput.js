@@ -12,9 +12,14 @@ class GroupInput extends Component{
         })
       }
 
+      handleSubmit = (event)=>{
+        event.preventDefault()
+        this.props.handleCreate(this.state)
+    }
+
     render(){
         return(
-            <form >
+            <form onSubmit={this.handleSubmit}>
                 <label>Username:</label>
                 <input type="text" name="group_name" value={this.state.group_name} onChange={this.handleChange} /><br/>
                 <input type="submit"/>
