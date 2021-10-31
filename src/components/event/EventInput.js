@@ -19,13 +19,13 @@ class EventInput extends Component{
         return(
             <form>
                 <label>Event Title:</label>
-                <input type="text"/><br/>
+                <input type="text" name="event_name" value={this.state.event_name} onChange={this.handleChange}/><br/>
                 <label>Event Description:</label>
-                <input type="text"/><br/>
+                <input type="text" name="description" value={this.state.description} onChange={this.handleChange}/><br/>
                 <label>Estimated Time:</label>
-                <input type="text"/><br/>
+                <input type="text" name="est_time" value={this.state.est_time} onChange={this.handleChange}/><br/>
                 <label>Game Type:</label>
-                <input type="text"/><br/>
+                <input type="text" name="game_type" value={this.state.game_type} onChange={this.handleChange}/><br/>
                 <input type="submit"/>
             </form>
         )
