@@ -28,7 +28,7 @@ class FriendsListContainer extends Component{
     )
 
     renderList = (id)=>{
-        console.log(id)
+        console.log(this.props.users)
         // return <FriendsList userInfo={this.props.user} friendInfo={friend} />
     }
         
