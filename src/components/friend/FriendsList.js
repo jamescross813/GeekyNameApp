@@ -5,7 +5,8 @@ const FriendsList = ({friendInfo})=>{
     <div>
         <ul>
             <li>
-                {console.log(friendInfo)}
+                {/* {console.log(friendInfo)} */}
+                FriendList
             </li>
         </ul>
     </div>
