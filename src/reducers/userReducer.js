@@ -2,15 +2,15 @@ function userReducer(state={
     user:{},
 },
 action){
-    console.log(action)
+    // console.log(action)
     switch(action.type){
         case "ADD_USER":
             return{
-                ...state,
-                user:[...state.user, action.name]
+                user: action.userData
             }
             default:
                 return state
     }
+    
 }
 export default userReducer
