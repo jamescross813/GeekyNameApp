@@ -1,5 +1,6 @@
 import { Component } from "react";
 import FriendsList from "../../components/friend/FriendsList";
+import {connect} from "react-redux"
 
 class FriendsListContainer extends Component{
     state={
