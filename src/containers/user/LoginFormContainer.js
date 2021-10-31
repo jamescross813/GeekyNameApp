@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import UserHomepageContainer from "./UserHomepageContainer";
 import { connect } from 'react-redux';
+import LoginForm from "../../components/user/LoginForm";
 
 
-class LoginForm extends Component {
+class LoginFormContainer extends Component {
 
     login = (userData) =>{
         let loginInfo = {
@@ -46,4 +47,4 @@ const mapDispatchToProps=(dispatch)=>{
   };
 }
 
-export default connect(null, mapDispatchToProps)(LoginForm)
+export default connect(null, mapDispatchToProps)(LoginFormContainer)
