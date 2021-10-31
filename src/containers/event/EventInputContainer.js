@@ -21,7 +21,8 @@ class EventInputContainer extends Component{
             body: JSON.stringify(eventInfo)
           };
           fetch("http://localhost:3000/events", configObj)
-            .then((r) => console.log(r))
+            .then((r) => r.json())
+            .then(data=>console.log(data))
             
     }
 
