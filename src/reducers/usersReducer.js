@@ -1,4 +1,4 @@
-function userReducer(state={
+function usersReducer(state={
     user:{},
 },
 action){
@@ -13,4 +13,4 @@ action){
     }
     
 }
-export default userReducer
+export default usersReducer
