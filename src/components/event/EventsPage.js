@@ -7,7 +7,7 @@ const EventsPage = ()=>{
     <div>
         <h3>Events Page</h3>
         <EventsListContainer />
-        <EventInputContainer />
+        <button>Add</button>
     </div>
     )
 }
