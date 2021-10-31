@@ -53,13 +53,13 @@ class LoginForm extends Component {
       }
 };
 
-mapDispatchToProps=(dispatch)=>{
-  return{
-    setUserInfo: (user) => dispatch({
-      type: "ADD_USER",
-      userData: user
-    })
-  }
-}
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     setUserInfo: (user) => dispatch({
+//       type: "ADD_USER",
+//       userData: user
+//     })
+//   };
+// }
 
-export default connect(null, mapDispatchToProps)(LoginForm)
+export default connect()(LoginForm)
