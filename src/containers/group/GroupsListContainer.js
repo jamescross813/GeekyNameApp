@@ -18,13 +18,18 @@ class GroupsListContainer extends Component{
         })
     }
 
-    renderList=()=>
-    this.state.groups.map((group)=>(<GroupsList group = {group} />))
+    gatherList=()=>(
+        this.state.groups.map((group)=>{
+            console.log(group.user_groups)
+                // console.log(this.props.user.user.id)
+            }             
+        )
+    )
 
     render(){
         return(
         <div>
-            {/* {this.renderList()} */}
+            {this.gatherList()}
         </div>
         )
     }
