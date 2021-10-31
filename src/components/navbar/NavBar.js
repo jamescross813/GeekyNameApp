@@ -13,6 +13,12 @@ const NavBar = () => {
           Home
         </NavLink>
         <NavLink 
+        to="/user"
+        exact
+        >
+          User
+        </NavLink>
+        <NavLink 
         to="/friends"
         exact
         >
