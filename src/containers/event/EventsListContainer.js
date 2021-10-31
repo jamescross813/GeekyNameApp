@@ -17,14 +17,16 @@ class EventsListContainer extends Component{
         })
     }
 
-    renderList=()=>
-        this.state.events.map((event)=>(<EventsList event = {event} />)
-        )
+    gatherList=()=>(
+        this.state.events.map((event)=>{
+            console.log(event)
+        })
+    )
     
     render(){
         return(   
             <div>
-                {/* {this.renderList()} */}
+                {this.gatherList()}
                 {/* {console.log(this.state.events)} */}
                 {/* <EventsList /> */}
             </div>
