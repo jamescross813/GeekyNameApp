@@ -22,7 +22,7 @@ class SignupFormContainer extends Component {
                   },
                   body: JSON.stringify(loginInfo)
                 };
-                fetch("http://localhost:3000/signup", configObj)
+                fetch("http://localhost:3000/users/create", configObj)
                   .then((r) => r.json())
                   .then(data=> this.props.setUserInfo(data)) 
                   // .then(console.log(this.props))   
