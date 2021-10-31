@@ -9,6 +9,12 @@ class EventInput extends Component{
         game_type:""
     }
 
+    handleChange = (event) =>{
+        this.setState({
+          [event.target.name]: event.target.value
+        })
+      }
+
     render(){
         return(
             <form>
