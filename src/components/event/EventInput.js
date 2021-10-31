@@ -3,9 +3,11 @@ import { Component } from "react";
 class EventInputContainer extends Component{
 
     render(){
-        <div>
+        return(
+            <div>
 
-        </div>
+            </div>
+        )
     }
 }
 
