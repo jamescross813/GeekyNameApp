@@ -1,15 +1,14 @@
 import { Component } from "react";
-import EventInput from "../../components/event/EventInput"
 
-class EventInputContainer extends Component{
+class EventInput extends Component{
 
     render(){
         return(
             <div>
-                <EventInput />
+                This is rendering
             </div>
         )
     }
 }
 
-export default EventInputContainer
+export default EventInput
