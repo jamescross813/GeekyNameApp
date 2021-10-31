@@ -6,7 +6,8 @@ const EventsList = ({eventInfo})=>{
         <ul>
             <li>
                 {/* {eventInfo.event_name} */}
-                {console.log(eventInfo.event_name)}
+                {/* {console.log(eventInfo.event_name)} */}
+                You are here
             </li>
         </ul>
     </div>
