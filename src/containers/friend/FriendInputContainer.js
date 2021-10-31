@@ -24,9 +24,7 @@ class EventInputContainer extends Component{
             .then((r)=>console.log(r))
             // .then(data=>console.log(data))
             // .then(this.props.history.push("/friends"))
-            
-    }
-
+        }
 
     render(){
         return(
