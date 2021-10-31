@@ -11,6 +11,7 @@ import EventsPageContainer from "./containers/event/EventsPageContainer"
 import UsersContainer from "./containers/user/UsersContainer";
 import NavBar from "./components/navbar/NavBar";
 import EventInputContainer from "./containers/event/EventInputContainer";
+import FriendInputContainer from "./containers/friend/FriendInputContainer";
 
 class App extends Component { 
  
@@ -28,7 +29,8 @@ class App extends Component {
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
           <Route to path="/availability" />
-          <Route to path="/event/add" render={routerprops=><EventInputContainer {...routerprops} userData={this.state}/>} /> 
+          <Route to path="/event/add" render={routerprops=><EventInputContainer {...routerprops} />} /> 
+          <Route to path="/friend/add" render={routerprops=><FriendInputContainer {...routerprops} />} /> 
 
         </div>
       </Router>
