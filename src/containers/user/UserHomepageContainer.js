@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserHomepage from "../../components/user/UserHomepage"
 import {Route} from "react-router-dom"
+import {connect} from "react-redux"
 
 class UserHomepageContainer extends Component{
     state={
@@ -17,4 +18,10 @@ class UserHomepageContainer extends Component{
     }
 }
 
-export default UserHomepageContainer
+const mapStateToProps = state =>{
+    return{
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps)(UserHomepageContainer)
