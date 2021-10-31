@@ -14,7 +14,6 @@ import { Link } from "react-router-dom"
 class LoginForm extends Component {
 
     state = {
-        user:{}, 
         username: "",
         password: ""
     }
@@ -27,32 +26,9 @@ class LoginForm extends Component {
 
     handleSubmit = (event) =>{
         event.preventDefault()
-        let loginInfo = {
-          user: {
-            username: this.state.username,
-            password: this.state.password,
-          },
-        }
-        let configObj = {
-          method: "POST",
-          headers:{
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-          },
-          body: JSON.stringify(loginInfo)
-      };
-    fetch("http://localhost:3000/login", configObj)
-    .then((r) => r.json())
-    .then(data=> this.dataHandler(data))
+      this.props.handleSubmit(this.state)
     }
-
-    dataHandler(data){
-      this.setState({
-        user: data
-      })
-      console.log(this.state.user)
-    }
-
+    
     render() {  
         return (
           <form onSubmit={this.handleSubmit}>

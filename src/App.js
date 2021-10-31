@@ -14,24 +14,33 @@ class App extends Component {
     this.fetchSession(formData)
   }
 
-  // fetchSession(formData){
-  //   fetch("http://localhost:3000/login",{
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     "Accept": "application/json",
-  //   },
-  //   body: JSON.stringify({
-  //     user: {
-  //       username: formData.username,
-  //       password: formData.password,
-  //     },
-  //   }),
-  // })
-  //   .then((r) => r.json())
-  //   .then(data=> console.log(data));
-  //   }
+  fetchSession(formData){
+    event.preventDefault()
+  let loginInfo = {
+    user: {
+      username: this.state.username,
+      password: this.state.password,
+    },
+  }
+  let configObj = {
+    method: "POST",
+    headers:{
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    body: JSON.stringify(loginInfo)
+};
+fetch("http://localhost:3000/login", configObj)
+.then((r) => r.json())
+.then(data=> this.dataHandler(data))
+}
 
+dataHandler(data){
+this.setState({
+  user: data
+})
+console.log(this.state.user)
+}
   render() {
     return(
       <Router>
