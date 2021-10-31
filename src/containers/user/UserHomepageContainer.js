@@ -9,7 +9,7 @@ class UserHomepageContainer extends Component{
     }
 
         render(){
-        
+        console.log(this.props)
         return(
         <div>
           <UserHomepage userInfo={this.props.user}/>
