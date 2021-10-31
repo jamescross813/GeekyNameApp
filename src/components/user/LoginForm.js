@@ -11,6 +11,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import UserHomepageContainer from "../../containers/user/UserHomepageContainer";
+import { connect } from 'react-redux';
 
 class LoginForm extends Component {
 
@@ -48,7 +49,6 @@ class LoginForm extends Component {
                   .then(data=> this.setState({
                     user: data
                   })
-                  
                 )    
                 .then(this.props.history.push("/user"))
     }
@@ -66,4 +66,4 @@ class LoginForm extends Component {
       }
 };
 
-export default LoginForm
+export default connect(null, mapDispatchToProps)(LoginForm)
