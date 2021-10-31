@@ -36,7 +36,8 @@ class LoginForm extends Component {
                 };
                 fetch("http://localhost:3000/login", configObj)
                   .then((r) => r.json())
-                  .then(data=> this.props.setUserInfo(data))    
+                  .then(data=> this.props.setUserInfo(data)) 
+                  // .then(console.log(this.props))   
                   .then(this.props.history.push("/user"))
     }
 
@@ -53,13 +54,16 @@ class LoginForm extends Component {
       }
 };
 
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     setUserInfo: (user) => dispatch({
-//       type: "ADD_USER",
-//       userData: user
-//     })
-//   };
-// }
+const mapDispatchToProps=(dispatch)=>{
+  return {
+    setUserInfo: (user) => dispatch({
+      type: "ADD_USER",
+      userData: user
+    })
+  };
+}
+const mapStateToProps=(state)=>{
+  return{user:state.user}
+}
 
-export default connect()(LoginForm)
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm)
