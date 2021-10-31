@@ -46,7 +46,7 @@ state = {
   
 
   render() {
-    {console.log(this.state)}
+    {console.log(this.state.username)}
     return(
       <Router>
         <div className="App">

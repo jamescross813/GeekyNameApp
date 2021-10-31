@@ -11,7 +11,7 @@ import GroupsPageContainer from "../../containers/group/GroupsPageContainer";
 
 class UserHomepage extends Component{
     render(){
-        {console.log(this.props)}
+        // {console.log(this.props)}
         return(
         <div>
             <NavBar />
