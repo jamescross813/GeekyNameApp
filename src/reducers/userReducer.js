@@ -12,3 +12,4 @@ action){
                 return state
     }
 }
+export default userReducer
