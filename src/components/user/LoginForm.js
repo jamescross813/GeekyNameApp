@@ -19,26 +19,7 @@ class LoginForm extends Component {
 
     handleSubmit = (event) =>{
       console.log(this.props)
-        event.preventDefault()
-        let loginInfo = {
-                  user: {
-                    username: this.state.username,
-                    password: this.state.password,
-                  },
-                }
-                let configObj = {
-                  method: "POST",
-                  headers:{
-                      "Content-Type": "application/json",
-                      "Accept": "application/json"
-                  },
-                  body: JSON.stringify(loginInfo)
-                };
-                fetch("http://localhost:3000/login", configObj)
-                  .then((r) => r.json())
-                  .then(data=> this.props.setUserInfo(data)) 
-                  // .then(console.log(this.props))   
-                  .then(this.props.history.push("/user"))
+      this.props.handleLogin(this.state)
     }
 
     render() {  
@@ -54,13 +35,6 @@ class LoginForm extends Component {
       }
 };
 
-const mapDispatchToProps=(dispatch)=>{
-  return {
-    setUserInfo: (user) => dispatch({
-      type: "ADD_USER",
-      userData: user
-    })
-  };
-}
 
-export default connect(null, mapDispatchToProps)(LoginForm)
+
+export default LoginForm
