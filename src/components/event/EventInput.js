@@ -2,6 +2,13 @@ import { Component } from "react";
 
 class EventInput extends Component{
 
+    state={
+        event_name: "",
+        description: "",
+        est_time: "",
+        game_type:""
+    }
+
     render(){
         return(
             <form>
