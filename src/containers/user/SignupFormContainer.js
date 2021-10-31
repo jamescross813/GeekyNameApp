@@ -24,8 +24,7 @@ class SignupFormContainer extends Component {
                 };
                 fetch("http://localhost:3000/users", configObj)
                   .then((r) => r.json())
-                  .then(data=> this.props.setUserInfo(data)) 
-                  // .then(console.log(this.props))   
+                  .then(data=> this.props.setUserInfo(data))   
                   .then(this.props.history.push("/user"))
     }
 
