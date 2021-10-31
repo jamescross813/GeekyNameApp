@@ -1,5 +1,6 @@
 import { Component } from "react";
 import EventInput from "../../components/event/EventInput"
+import {connect} from "react-redux"
 
 class EventInputContainer extends Component{
 
@@ -38,4 +39,4 @@ class EventInputContainer extends Component{
     }
 }
 
-export default EventInputContainer
+export default connect()(EventInputContainer)
