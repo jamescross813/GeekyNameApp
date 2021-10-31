@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, NavLink, Link } from "react-router-dom"
 import './App.css';
 import Homepage from "./components/homepage/Homepage";
-import LoginForm from "./components/user/LoginForm"
+import LoginFormContainer from "./containers/user/LoginFormContainer"
 import UserHomepageContainer from "./containers/user/UserHomepageContainer"
 import GroupsPageContainer from "./containers/group/GroupsPageContainer"
 import FriendsPageContainer from "./containers/friend/FriendsPageContainer"
@@ -15,7 +15,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
-          <Route to exact path="/signup" render={routerprops=><LoginForm {...routerprops} handleLogin={this.login} />}/>
+          {/* <Route to exact path="/signup" render={routerprops=><LoginForm {...routerprops} handleLogin={this.login} />}/> */}
           <Route to exact path="/login" render={routerprops=><LoginFormContainer {...routerprops} />}/>
           <Route to path="/user" render={routerprops=><UserHomepageContainer {...routerprops} userData={this.state}/>} />
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
