@@ -19,7 +19,7 @@ class EventInput extends Component{
       handleSubmit = (event)=>{
           event.preventDefault()
         //   console.log(this.state)
-          this.props.handleChange(this.state)
+          this.props.handleCreate(this.state)
       }
 
     render(){
