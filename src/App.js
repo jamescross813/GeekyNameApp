@@ -28,8 +28,8 @@ class App extends Component {
       },
     }),
   })
-    .then((r) => console.log(r))
-    // .then(data=>console.log(data));
+    .then((r) => r.json())
+    .then(data=> <UserHomepageContainer info={data}/>);
     }
   
 
