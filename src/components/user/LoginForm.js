@@ -60,9 +60,9 @@ class LoginForm extends Component {
               <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /><br/>
               <label>Password</label><br/>
               <input type="password" name="password" value={this.state.password} onChange={this.handleChange} /><br/>
-              {/* <Link to="/user/1"> */}
+              <Link to="/user/1" data={this.state.user}>
                 <input type="submit" />
-              {/* </Link> */}
+              </Link>
           </form>
         );
       }
