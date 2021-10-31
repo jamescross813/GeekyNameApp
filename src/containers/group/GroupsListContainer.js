@@ -33,11 +33,12 @@ class GroupsListContainer extends Component{
 
     finalInfo=(id)=>{
         return(
-        this.state.groups.map((group)=>{
-            if(group.id === id){
-                return <GroupsList group={group} />
-            }
-        })
+            this.state.groups.map((group)=>{
+                if(group.id === id){
+                    // console.log(group)
+                    return <GroupsList groupInfo={group} />
+                }
+            })
         )
     }
 
