@@ -9,13 +9,16 @@ import FriendsPageContainer from "./containers/friend/FriendsPageContainer"
 import EventsPageContainer from "./containers/event/EventsPageContainer"
 
 class App extends Component { 
+
+  state={
+    user:{}
+  }
   
   login = (formData) =>{
     this.fetchSession(formData)
   }
 
   fetchSession(formData){
-    event.preventDefault()
   let loginInfo = {
     user: {
       username: this.state.username,
@@ -32,15 +35,12 @@ class App extends Component {
 };
 fetch("http://localhost:3000/login", configObj)
 .then((r) => r.json())
-.then(data=> this.dataHandler(data))
-}
-
-dataHandler(data){
-this.setState({
+.then(data=> this.setState({
   user: data
 })
-console.log(this.state.user)
+)
 }
+
   render() {
     return(
       <Router>
