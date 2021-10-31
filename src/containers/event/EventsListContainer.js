@@ -37,7 +37,13 @@ class EventsListContainer extends Component{
     }
 
     finalListInfo=(id)=>{
-        return console.log(id)
+        return(
+            this.state.events.map((event)=>{
+                if(event.id === id){
+                    return <EventsList eventInfo={event} />
+                }
+            })
+        )
     }
     
     render(){
