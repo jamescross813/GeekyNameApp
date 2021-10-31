@@ -27,9 +27,6 @@ const mapDispatchToProps=(dispatch)=>{
       };
 }
 
-const mapStateToProps=(state)=>{
-    return{users: state.users}
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer)
+export default connect(null, mapDispatchToProps)(UsersContainer)
 
