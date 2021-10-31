@@ -35,6 +35,10 @@ class EventsListContainer extends Component{
             })
         )
     }
+
+    finalListInfo=(id)=>{
+        return console.log(id)
+    }
     
     render(){
         return(   
