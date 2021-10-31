@@ -8,6 +8,7 @@ import UserHomepageContainer from "./containers/user/UserHomepageContainer"
 import GroupsPageContainer from "./containers/group/GroupsPageContainer"
 import FriendsPageContainer from "./containers/friend/FriendsPageContainer"
 import EventsPageContainer from "./containers/event/EventsPageContainer"
+import UsersContainer from "./containers/user/UsersContainer";
 
 class App extends Component { 
  
@@ -15,6 +16,7 @@ class App extends Component {
     return(
       <Router>
         <div className="App">
+          <UsersContainer/>
           <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
           <Route to exact path="/signup" render={routerprops=><SignupFormContainer {...routerprops}/>}/>
           <Route to exact path="/login" render={routerprops=><LoginFormContainer {...routerprops} />}/>
