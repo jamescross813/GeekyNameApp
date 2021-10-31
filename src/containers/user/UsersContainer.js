@@ -8,7 +8,9 @@ class UserContainer extends Component{
 
     }
     render(){
-        <div></div>
+        return(
+        <div>{this.fetchUsers()}</div>
+        )
     }
 }
 
