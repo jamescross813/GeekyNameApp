@@ -7,7 +7,6 @@ class EventsPageContainer extends Component{
         return(
             <div>
                 <EventsPage />
-                <EventsList />
             </div>
         )
     }
