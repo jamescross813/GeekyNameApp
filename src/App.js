@@ -12,6 +12,7 @@ import UsersContainer from "./containers/user/UsersContainer";
 import NavBar from "./components/navbar/NavBar";
 import EventInputContainer from "./containers/event/EventInputContainer";
 import FriendInputContainer from "./containers/friend/FriendInputContainer";
+import GroupInputContainer from "./containers/group/GroupInputContainer"
 
 class App extends Component { 
  
@@ -31,6 +32,7 @@ class App extends Component {
           <Route to path="/availability" />
           <Route to path="/event/add" render={routerprops=><EventInputContainer {...routerprops} />} /> 
           <Route to path="/friend/add" render={routerprops=><FriendInputContainer {...routerprops} />} /> 
+          <Route to path="/group/add" render={routerprops=><GroupInputContainer {...routerprops} />} /> 
 
         </div>
       </Router>
