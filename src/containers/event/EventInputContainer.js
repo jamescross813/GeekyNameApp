@@ -10,7 +10,7 @@ class EventInputContainer extends Component{
     render(){
         return(
             <div>
-                <EventInput />
+                <EventInput handleCreate={this.createEvent}/>
             </div>
         )
     }
