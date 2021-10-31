@@ -30,7 +30,7 @@ class EventsListContainer extends Component{
         return(
             events.map((event)=>{
                 if(event.user_id === this.props.user.user.id){
-                    console.log(event.event_id)
+                    return this.finalListInfo(event.event_id)
                 }
             })
         )
