@@ -39,4 +39,8 @@ class EventInputContainer extends Component{
     }
 }
 
-export default connect()(EventInputContainer)
+const mapStateToProps=(state)=>{
+    return{user: state.user}
+}
+
+export default connect(mapStateToProps)(EventInputContainer)
