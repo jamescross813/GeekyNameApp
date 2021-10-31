@@ -6,7 +6,7 @@ import EventInputContainer from "./EventInputContainer";
 class EventsPageContainer extends Component{
    
     render(){
-        console.log(this.props)
+        
         return(
             <div>
                 <EventsPage />
