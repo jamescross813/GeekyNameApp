@@ -19,7 +19,10 @@ class EventsListContainer extends Component{
 
     gatherList=()=>(
         this.state.events.map((event)=>{
-            console.log(event)
+            if(event.user_events.length>0){
+                return this.gatherListInfo(event.user_events)
+            }
+            // console.log(event.user_events)
         })
     )
     
