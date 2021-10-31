@@ -19,14 +19,13 @@ class FriendsListContainer extends Component{
 
     renderList=()=>(
         this.state.friends.map((friend)=>{
-            if (friend.user_id === this.props.user.id || friend.friend_id === this.props.user.id){
-                console.log("yes")
-            }else{
-                console.log("nope")
+            if(friend.user_id === this.props.user.id || friend.friend_id === this.props.user.id){}
+                return(
+                <FriendsList userInfo={this.props.user} />
+                )
             }
-            // console.log(this.props.user.id)
-        }
-            ))
+        )
+            )
         
 
     render(){
