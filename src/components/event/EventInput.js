@@ -4,9 +4,9 @@ class EventInput extends Component{
 
     render(){
         return(
-            <div>
-                This is rendering
-            </div>
+            <form>
+                <input type="text"/>
+            </form>
         )
     }
 }
