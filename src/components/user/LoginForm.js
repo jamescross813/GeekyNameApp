@@ -16,7 +16,6 @@ import { connect } from 'react-redux';
 class LoginForm extends Component {
 
     state = {
-        user:{},
         username: "",
         password: ""
     }
@@ -46,11 +45,8 @@ class LoginForm extends Component {
                 };
                 fetch("http://localhost:3000/login", configObj)
                   .then((r) => r.json())
-                  .then(data=> this.setState({
-                    user: data
-                  })
-                )    
-                .then(this.props.history.push("/user"))
+                  .then(data=> this.props.setUserInfo(data))    
+                  .then(this.props.history.push("/user"))
     }
 
     render() {  
@@ -65,5 +61,14 @@ class LoginForm extends Component {
         );
       }
 };
+
+mapDispatchToProps=(dispatch)=>{
+  return{
+    setUserInfo: (user) => dispatch({
+      type: "ADD_USER",
+      userData: user
+    })
+  }
+}
 
 export default connect(null, mapDispatchToProps)(LoginForm)
