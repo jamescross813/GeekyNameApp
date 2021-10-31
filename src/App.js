@@ -9,6 +9,7 @@ import GroupsPageContainer from "./containers/group/GroupsPageContainer"
 import FriendsPageContainer from "./containers/friend/FriendsPageContainer"
 import EventsPageContainer from "./containers/event/EventsPageContainer"
 import UsersContainer from "./containers/user/UsersContainer";
+import NavBar from "./components/navbar/NavBar";
 
 class App extends Component { 
  
@@ -17,6 +18,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <UsersContainer/>
+          <NavBar />
           <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
           <Route to exact path="/signup" render={routerprops=><SignupFormContainer {...routerprops}/>}/>
           <Route to exact path="/login" render={routerprops=><LoginFormContainer {...routerprops} />}/>
