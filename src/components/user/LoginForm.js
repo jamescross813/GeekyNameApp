@@ -14,7 +14,7 @@ import { Link } from "react-router-dom"
 class LoginForm extends Component {
 
     state = {
-        user:"", 
+        user:{}, 
         username: "",
         password: ""
     }
@@ -47,9 +47,12 @@ class LoginForm extends Component {
     }
 
     dataHandler(data){
-      console.log(data)
+      this.setState({
+        user: data
+      })
+      console.log(this.state.user)
     }
-    
+
     render() {  
         return (
           <form onSubmit={this.handleSubmit}>
