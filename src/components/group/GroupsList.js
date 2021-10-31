@@ -5,7 +5,7 @@ const GroupsList = ()=>{
     <div>
         <ul>
             <li>
-                Groups List
+                {console.log(this.props)}
             </li>
         </ul>
     </div>
