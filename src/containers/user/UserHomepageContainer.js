@@ -4,10 +4,7 @@ import {Route} from "react-router-dom"
 import {connect} from "react-redux"
 
 class UserHomepageContainer extends Component{
-    state={
-        user:{}
-    }
-
+    
     render(){
         return(
         <div>
