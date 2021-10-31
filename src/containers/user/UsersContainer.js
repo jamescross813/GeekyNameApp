@@ -7,7 +7,7 @@ class UsersContainer extends Component{
         fetch("http://localhost:3000/users")
         .then(r=>r.json())
         .then(data=>this.props.setUsersInfo(data))
-        .then(console.log())
+        // .then(console.log())
     }
 
     render(){
@@ -24,6 +24,10 @@ const mapDispatchToProps=(dispatch)=>{
           userData: user
         })
       };
+}
+
+const mapStateToProps=(state)=>{
+    return(console.log(state))
 }
 
 export default connect(null, mapDispatchToProps)(UsersContainer)
