@@ -14,6 +14,7 @@ import { Link } from "react-router-dom"
 class LoginForm extends Component {
 
     state = {
+        user:"", 
         username: "",
         password: ""
     }
@@ -42,9 +43,13 @@ class LoginForm extends Component {
       };
     fetch("http://localhost:3000/login", configObj)
     .then((r) => r.json())
-    .then(data=> console.log(data));
+    .then(data=> this.dataHandler(data))
     }
 
+    dataHandler(data){
+      console.log(data)
+    }
+    
     render() {  
         return (
           <form onSubmit={this.handleSubmit}>
