@@ -28,8 +28,12 @@ class GroupsListContainer extends Component{
     )
 
     gatherListInfo=(userGroup)=>(
-        console.log(userGroup)
+        userGroup.map((group)=>this.finalInfo(group.id))
     )
+
+    // finalInfo=(id)=>(
+        
+    // )
 
     render(){
         return(
