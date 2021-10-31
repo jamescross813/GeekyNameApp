@@ -24,9 +24,14 @@ class FriendsListContainer extends Component{
         return(
         <div>
             {/* {this.renderList()} */}
+            {console.log(this.props)}
         </div>
         )
     }
 }
 
-export default FriendsListContainer
+const mapStateToProps=(state)=>{
+    return{user: state.user}
+}
+
+export default connect(mapStateToProps)(FriendsListContainer)
