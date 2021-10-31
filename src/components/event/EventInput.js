@@ -18,12 +18,10 @@ class EventInput extends Component{
 
       handleSubmit = (event)=>{
           event.preventDefault()
-        //   console.log(this.state)
           this.props.handleCreate(this.state)
       }
 
     render(){
-        // console.log(this.props)
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>Event Title:</label>
