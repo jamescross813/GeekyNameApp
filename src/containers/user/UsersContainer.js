@@ -6,8 +6,8 @@ class UserContainer extends Component{
         fetch("http://localhost:3000/users")
         .then(r=>r.json())
         .then(data=>console.log(data))
-
     }
+    
     render(){
         return(
         <div>{this.fetchUsers()}</div>
