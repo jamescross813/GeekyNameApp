@@ -27,10 +27,6 @@ class LoginForm extends Component {
     handleSubmit = (event) =>{
         event.preventDefault()
         this.props.handleLogin(this.state)
-        this.setState({
-          username: "",
-          password: ""
-        })
       }
 
     render() {  
