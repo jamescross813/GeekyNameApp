@@ -35,7 +35,7 @@ state = {
             password: formData.password,
           },
         }
-        let configObj = {
+    let configObj = {
           method: "POST",
           headers:{
               "Content-Type": "application/json",
@@ -44,7 +44,8 @@ state = {
           body: JSON.stringify(loginInfo)
       };
     fetch("http://localhost:3000/login", configObj)
-    .then((r) => r.json())
+    // .then((r) => r.json())
+    .then((r)=>console.log(r))
     // .then(data=> this.loginState(data))
     .then(data=> console.log(data))
     }
