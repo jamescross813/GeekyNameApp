@@ -2,7 +2,7 @@ function usersReducer(state={
     users:{},
 },
 action){
-    console.log(action)
+    // console.log(action)
     switch(action.type){
         case "ADD_USERS":
             return{
