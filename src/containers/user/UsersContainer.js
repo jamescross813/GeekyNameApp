@@ -15,5 +15,14 @@ class UserContainer extends Component{
     }
 }
 
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        setUserInfo: (user) => dispatch({
+          type: "ADD_USER",
+          userData: user
+        })
+      };
+}
+
 export default UserContainer
 
