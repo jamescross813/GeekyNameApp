@@ -15,8 +15,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route to exact path = "/" render={()=><Homepage />}/>
-          <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
-          <Route to exact path="/login" render={()=><LoginForm />}/>
+          <Route to exact path="/signup" render={routerprops=><LoginForm {...routerprops} handleLogin={this.login} />}/>
+          <Route to exact path="/login" render={routerprops=><LoginForm {...routerprops} />}/>
           <Route to path="/user" render={routerprops=><UserHomepageContainer {...routerprops} />} />
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>

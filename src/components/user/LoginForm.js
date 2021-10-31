@@ -27,11 +27,12 @@ class LoginForm extends Component {
       }
 
     handleSubmit = (event) =>{
+      console.log(this.props)
         event.preventDefault()
         let loginInfo = {
                   user: {
-                    username: formData.username,
-                    password: formData.password,
+                    username: this.state.username,
+                    password: this.state.password,
                   },
                 }
                 let configObj = {
@@ -47,7 +48,9 @@ class LoginForm extends Component {
                   .then(data=> this.setState({
                     user: data
                   })
+                  
                 )    
+                .then(this.props.history.push("/user"))
     }
 
     render() {  
@@ -57,9 +60,9 @@ class LoginForm extends Component {
               <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /><br/>
               <label>Password</label><br/>
               <input type="password" name="password" value={this.state.password} onChange={this.handleChange} /><br/>
-              <Link to= "/user">
-              <input type="submit" />
-              </Link>
+           
+                <input type="submit" />
+           
           </form>
         );
       }
