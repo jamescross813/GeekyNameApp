@@ -26,8 +26,24 @@ class LoginForm extends Component {
 
     handleSubmit = (event) =>{
         event.preventDefault()
-        this.props.handleLogin(this.state)
-      }
+        let loginInfo = {
+          user: {
+            username: this.state.username,
+            password: this.state.password,
+          },
+        }
+        let configObj = {
+          method: "POST",
+          headers:{
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+          },
+          body: JSON.stringify(loginInfo)
+      };
+    fetch("http://localhost:3000/login", configObj)
+    .then((r) => r.json())
+    .then(data=> console.log(data));
+    }
 
     render() {  
         return (
