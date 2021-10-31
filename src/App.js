@@ -10,6 +10,11 @@ import EventsPageContainer from "./containers/event/EventsPageContainer"
 
 class App extends Component {
 
+state = {
+  username: "",
+  password: ""
+}
+
   login = (formData) =>{
     this.fetchSession(formData)
   }
@@ -32,7 +37,7 @@ class App extends Component {
       };
     fetch("http://localhost:3000/login", configObj)
     .then((r) => r.json())
-    .then(data=> <UserHomepageContainer data={data}/>);
+    .then(data=> );
     }
   
 
