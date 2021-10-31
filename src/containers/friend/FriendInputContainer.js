@@ -29,7 +29,7 @@ class EventInputContainer extends Component{
     render(){
         return(
             <div>
-                <FriendInput />
+                <FriendInput handleCreate={this.createFriend}/>
             </div>
         )
     }
