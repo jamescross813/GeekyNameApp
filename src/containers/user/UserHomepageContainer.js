@@ -8,8 +8,7 @@ class UserHomepageContainer extends Component{
         user:{}
     }
 
-        render(){
-        console.log(this.props)
+    render(){
         return(
         <div>
           <UserHomepage userInfo={this.props.user}/>
