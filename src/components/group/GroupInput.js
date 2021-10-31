@@ -20,7 +20,7 @@ class GroupInput extends Component{
     render(){
         return(
             <form onSubmit={this.handleSubmit}>
-                <label>Username:</label>
+                <label>Group Name:</label>
                 <input type="text" name="group_name" value={this.state.group_name} onChange={this.handleChange} /><br/>
                 <input type="submit"/>
             </form>
