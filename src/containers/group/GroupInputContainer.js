@@ -17,4 +17,4 @@ const mapStateToProps=(state)=>{
     return{user: state.user}
 }
 
-export default connect()(GroupInputContainer)
+export default connect(mapStateToProps)(GroupInputContainer)
