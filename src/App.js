@@ -41,14 +41,18 @@ state = {
         username: data.username,
         userId: data.id
         })
+        
       )
+      console.log(this.state.username)
     }
   
 
   render() {
-    {console.log(this.state.username)}
+    
     return(
+      
       <Router>
+        
         <div className="App">
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
