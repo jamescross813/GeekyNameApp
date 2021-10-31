@@ -3,9 +3,9 @@ import { Component } from "react";
 class FormInput extends Component{
 
     state={
-        
+        username:""
     }
-    
+
     handleChange = (event) =>{
         this.setState({
             ...this.state,
