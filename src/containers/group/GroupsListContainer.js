@@ -1,5 +1,6 @@
 import { Component } from "react";
 import GroupsList from  "../../components/group/GroupsList"
+import {connect} from "react-redux"
 
 class GroupsListContainer extends Component{
 
@@ -29,4 +30,5 @@ class GroupsListContainer extends Component{
     }
 }
 
-export default GroupsListContainer
+export default connect()(GroupsListContainer)
+
