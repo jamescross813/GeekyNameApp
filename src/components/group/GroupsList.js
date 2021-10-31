@@ -1,11 +1,11 @@
 import React from "react";
 
-const GroupsList = ()=>{
+const GroupsList = ({groupInfo})=>{
     return(
     <div>
         <ul>
             <li>
-                {console.log(this.props)}
+                {groupInfo.group_name}
             </li>
         </ul>
     </div>
