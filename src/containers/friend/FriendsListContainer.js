@@ -21,7 +21,7 @@ class FriendsListContainer extends Component{
         this.state.friends.map((friend)=>{
             if(friend.user_id === this.props.user.id || friend.friend_id === this.props.user.id){}
                 return(
-                <FriendsList userInfo={this.props.user} />
+                <FriendsList userInfo={this.props.user} friendInfo={friend} />
                 )
             }
         )
