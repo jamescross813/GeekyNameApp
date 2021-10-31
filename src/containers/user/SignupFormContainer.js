@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import UserHomepageContainer from "./UserHomepageContainer";
 import { connect } from 'react-redux';
-import LoginForm from "../../components/user/LoginForm";
+import SignupForm from "../../components/user/LoginForm";
 
 
-class LoginFormContainer extends Component {
+class SignupFormContainer extends Component {
 
     login = (userData) =>{
         let loginInfo = {
@@ -32,7 +32,7 @@ class LoginFormContainer extends Component {
     render() {  
         return (
          <div>
-           <LoginForm handleLogin={this.login} />
+           <SignupForm handleLogin={this.login} />
          </div>
         );
       }
@@ -47,4 +47,4 @@ const mapDispatchToProps=(dispatch)=>{
   };
 }
 
-export default connect(null, mapDispatchToProps)(LoginFormContainer)
+export default connect(null, mapDispatchToProps)(SignupFormContainer)
