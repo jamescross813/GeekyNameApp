@@ -12,7 +12,7 @@ class App extends Component {
 
 state = {
   username: "",
-  password: ""
+  userId: ""
 }
 
   login = (formData) =>{
@@ -37,7 +37,11 @@ state = {
       };
     fetch("http://localhost:3000/login", configObj)
     .then((r) => r.json())
-    .then(data=> );
+    .then(data=> this.setState({
+        username: data.username,
+        userId: data.id
+        })
+      )
     }
   
 
@@ -48,7 +52,7 @@ state = {
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
-          <Route to path="/user/1" render={routerprops=><UserHomepageContainer {...routerprops}/>} />
+          <Route to path="/user/1" render={routerprops=><UserHomepageContainer {...routerprops} userData={this.state}/>} />
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
