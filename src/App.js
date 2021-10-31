@@ -14,24 +14,23 @@ class App extends Component {
     this.fetchSession(formData)
   }
 
-  fetchSession(formData){
-    console.log(formData)
-    fetch("http://localhost:3000/login",{
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-    },
-    body: JSON.stringify({
-      user: {
-        username: formData.username,
-        password: formData.password,
-      },
-    }),
-  })
-    .then((r) => r.json())
-    .then(data=> console.log(data));
-    }
+  // fetchSession(formData){
+  //   fetch("http://localhost:3000/login",{
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     "Accept": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //     user: {
+  //       username: formData.username,
+  //       password: formData.password,
+  //     },
+  //   }),
+  // })
+  //   .then((r) => r.json())
+  //   .then(data=> console.log(data));
+  //   }
 
   render() {
     return(
