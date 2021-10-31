@@ -1,11 +1,11 @@
 import React from "react";
 
-const FriendsList = ()=>{
+const FriendsList = ({friendInfo})=>{
     return(
     <div>
         <ul>
             <li>
-                Friends List
+                {console.log(friendInfo)}
             </li>
         </ul>
     </div>
