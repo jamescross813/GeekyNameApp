@@ -31,9 +31,15 @@ class GroupsListContainer extends Component{
         userGroup.map((group)=>this.finalInfo(group.id))
     )
 
-    // finalInfo=(id)=>(
-        
-    // )
+    finalInfo=(id)=>{
+        return(
+        this.state.groups.map((group)=>{
+            if(group.id === id){
+                return <GroupsList group={group}/>
+            }
+        })
+        )
+    }
 
     render(){
         return(
