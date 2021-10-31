@@ -10,55 +10,38 @@ import EventsPageContainer from "./containers/event/EventsPageContainer"
 
 class App extends Component {
 
-state = {
-  username: "",
-  userId: ""
-}
-
   login = (formData) =>{
     this.fetchSession(formData)
   }
 
-  loginState = (data)=> {
-    console.log(data)
-    // this.setState({
-    //   username: data.username,
-    //   userId: data.id
-    //   })
-  }
-
   fetchSession(formData){
-    // console.log(formData.username)
-    let loginInfo = {
-          user: {
-            username: formData.username,
-            password: formData.password,
-          },
-        }
-    let configObj = {
-          method: "POST",
-          headers:{
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-          },
-          body: JSON.stringify(loginInfo)
-      };
-    fetch("http://localhost:3000/login", configObj)
-    // .then((r) => r.json())
-    .then((r)=>console.log(r))
-    // .then(data=> this.loginState(data))
-    .then(data=> console.log(data))
+    console.log(formData)
+    fetch("http://localhost:3000/login",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+    },
+    body: JSON.stringify({
+      user: {
+        username: formData.username,
+        password: formData.password,
+      },
+    }),
+  })
+    .then((r) => r.json())
+    .then(data=> console.log(data));
     }
   
 
   render() {
-    return( 
+    return(
       <Router>
         <div className="App">
           <Route to exact path = "/" render={()=><Homepage />}/>
           <Route to exact path="/signup" render={()=><LoginForm handleLogin={this.login} />}/>
           <Route to exact path="/login" render={()=><LoginForm handleLogin={this.login} />}/>
-          <Route to path="/user/1" render={()=><UserHomepageContainer userInfo={this.state} />}/>
+          <Route to path="/user/1" render={routerprops=><UserHomepageContainer {...routerprops}/>} />
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
