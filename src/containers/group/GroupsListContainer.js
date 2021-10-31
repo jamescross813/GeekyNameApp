@@ -35,7 +35,7 @@ class GroupsListContainer extends Component{
         return(
         this.state.groups.map((group)=>{
             if(group.id === id){
-                return <GroupsList group={group}/>
+                return <GroupsList group={group} />
             }
         })
         )
