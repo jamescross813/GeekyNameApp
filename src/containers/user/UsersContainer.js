@@ -21,9 +21,9 @@ class UsersContainer extends Component{
 
 const mapDispatchToProps=(dispatch)=>{
     return {
-        setUsersInfo: (user) => dispatch({
+        setUsersInfo: (users) => dispatch({
           type: "ADD_USERS",
-          userData: user
+          userData: users
         })
       };
 }
