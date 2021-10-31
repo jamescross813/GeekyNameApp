@@ -4,7 +4,7 @@ import UserHomepageContainer from "../../containers/user/UserHomepageContainer";
 import { connect } from 'react-redux';
 
 
-class LoginForm extends Component {
+class SignupForm extends Component {
 
     state = {
         username: "",
@@ -38,4 +38,4 @@ class LoginForm extends Component {
 
 
 
-export default LoginForm
+export default SignupForm
