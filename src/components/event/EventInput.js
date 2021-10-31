@@ -25,7 +25,7 @@ class EventInput extends Component{
     render(){
         // console.log(this.props)
         return(
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <label>Event Title:</label>
                 <input type="text" name="event_name" value={this.state.event_name} onChange={this.handleChange}/><br/>
                 <label>Event Description:</label>
