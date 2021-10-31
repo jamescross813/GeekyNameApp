@@ -11,7 +11,7 @@ import GroupsListContainer from "../../containers/group/GroupsListContainer"
 
 class UserHomepage extends Component{
     render(){
-        // {console.log(this.props)}
+        {console.log(this.props)}
         return(
         <div>
             
