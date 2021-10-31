@@ -18,7 +18,8 @@ class LoginForm extends Component {
       }
 
     handleSubmit = (event) =>{
-      console.log(this.props)
+      // console.log(this.props)
+      event.preventDefault()
       this.props.handleLogin(this.state)
     }
 
