@@ -1,13 +1,13 @@
 import { Component } from "react";
 
-class UserContainer extends Component{
+class UsersContainer extends Component{
 
     fetchUsers=()=>{
         fetch("http://localhost:3000/users")
         .then(r=>r.json())
         .then(data=>console.log(data))
     }
-    
+
     render(){
         return(
         <div>{this.fetchUsers()}</div>
@@ -24,5 +24,5 @@ const mapDispatchToProps=(dispatch)=>{
       };
 }
 
-export default UserContainer
+export default UsersContainer
 
