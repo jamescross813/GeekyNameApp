@@ -5,7 +5,15 @@ class EventInput extends Component{
     render(){
         return(
             <form>
-                <input type="text"/>
+                <label>Event Title:</label>
+                <input type="text"/><br/>
+                <label>Event Description:</label>
+                <input type="text"/><br/>
+                <label>Estimated Time:</label>
+                <input type="text"/><br/>
+                <label>Game Type:</label>
+                <input type="text"/><br/>
+                <input type="submit"/>
             </form>
         )
     }
