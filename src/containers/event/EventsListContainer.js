@@ -25,6 +25,16 @@ class EventsListContainer extends Component{
             // console.log(event.user_events)
         })
     )
+
+    gatherListInfo = (events)=>{
+        return(
+            events.map((event)=>{
+                if(event.user_id === this.props.user.user.id){
+                    console.log(event.event_id)
+                }
+            })
+        )
+    }
     
     render(){
         return(   
