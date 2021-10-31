@@ -1,5 +1,6 @@
 import { Component } from "react";
 import EventsList from "../../components/event/EventsList";
+import {connect} from "react-redux"
 
 class EventsListContainer extends Component{
     state={
@@ -31,4 +32,4 @@ class EventsListContainer extends Component{
     }
 }
 
-export default EventsListContainer
+export default connect()(EventsListContainer)
