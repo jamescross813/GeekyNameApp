@@ -10,8 +10,8 @@ class EventInputContainer extends Component{
                 event_name: formData.event_name,
                 description: formData.description,
                 est_time: formData.est_time,
-                game_type: formData.game_type
-                // user_id: this.
+                game_type: formData.game_type,
+                user_id: this.props.user.user.id
             },
           }
           let configObj = {
@@ -32,7 +32,6 @@ class EventInputContainer extends Component{
     render(){
         return(
             <div>
-                {console.log(this.props)}
                 <EventInput handleCreate={this.createEvent}/>
             </div>
         )
