@@ -1,4 +1,5 @@
 import React from "react";
+import EventInputContainer from "../../containers/event/EventInputContainer";
 import EventsListContainer from "../../containers/event/EventsListContainer";
 
 const EventsPage = ()=>{
@@ -6,6 +7,7 @@ const EventsPage = ()=>{
     <div>
         <h3>Events Page</h3>
         <EventsListContainer />
+        <EventInputContainer />
     </div>
     )
 }
