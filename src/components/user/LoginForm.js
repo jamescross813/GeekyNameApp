@@ -1,13 +1,3 @@
-// login form
-// handleChange
-// handleSubmit
-
-// Form
-// username
-// password
-
-// pass info back
-
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import UserHomepageContainer from "../../containers/user/UserHomepageContainer";
