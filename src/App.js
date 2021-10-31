@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
+import { BrowserRouter as Router, Route, NavLink, Link } from "react-router-dom"
 import './App.css';
 import Homepage from "./components/homepage/Homepage";
 import LoginForm from "./components/user/LoginForm"
