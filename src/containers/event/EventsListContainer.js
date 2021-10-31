@@ -20,16 +20,13 @@ class EventsListContainer extends Component{
         this.state.events.map((event)=>(<EventsList event = {event} />)
         )
     
-
     render(){
-        
-        return(
-            
-        <div>
-            {/* {this.renderList()} */}
-            {/* {console.log(this.state.events)} */}
-            {/* <EventsList /> */}
-        </div>
+        return(   
+            <div>
+                {/* {this.renderList()} */}
+                {/* {console.log(this.state.events)} */}
+                {/* <EventsList /> */}
+            </div>
         )
     }
 }
