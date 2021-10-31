@@ -10,7 +10,6 @@
 
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
-import UserHomepageContainer from "../../containers/user/UserHomepageContainer";
 
 class LoginForm extends Component {
 
@@ -27,11 +26,7 @@ class LoginForm extends Component {
 
     handleSubmit = (event) =>{
         event.preventDefault()
-        this.setState({
-          username: this.state.username,
-          password: this.state.password
-        })
-        return <UserHomepageContainer forData={this.state} />
+        this.props.handleLogin(this.state)
       }
 
     render() {  
