@@ -4,7 +4,7 @@ function usersReducer(state={
 action){
     // console.log(action)
     switch(action.type){
-        case "ADD_USER":
+        case "ADD_USERS":
             return{
                 user: action.userData
             }
