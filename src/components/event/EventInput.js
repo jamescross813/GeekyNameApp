@@ -16,9 +16,9 @@ class EventInput extends Component{
         })
       }
 
-      hnadleSubmit = (event)=>{
-          
+      handleSubmit = (event)=>{
           event.preventDefault()
+        //   console.log(this.state)
           this.props.handleChange(this.state)
       }
 
