@@ -19,6 +19,14 @@ state = {
     this.fetchSession(formData)
   }
 
+  loginState = (data)=> {
+    console.log(data)
+    // this.setState({
+    //   username: data.username,
+    //   userId: data.id
+    //   })
+  }
+
   fetchSession(formData){
     // console.log(formData.username)
     let loginInfo = {
@@ -37,11 +45,8 @@ state = {
       };
     fetch("http://localhost:3000/login", configObj)
     .then((r) => r.json())
-    .then(data=> this.setState({
-        username: data.username,
-        userId: data.id
-        })
-      )
+    // .then(data=> this.loginState(data))
+    .then(data=> console.log(data))
     }
   
 
