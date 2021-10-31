@@ -8,7 +8,6 @@ class FormInput extends Component{
 
     handleChange = (event) =>{
         this.setState({
-            ...this.state,
           [event.target.name]: event.target.value
         })
       }
@@ -21,7 +20,8 @@ class FormInput extends Component{
     render(){
         return(
             <form>
-                
+                <label>Username:</label>
+                <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /><br/>
             </form>
         )
     }
