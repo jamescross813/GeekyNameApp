@@ -5,6 +5,7 @@ class FormInput extends Component{
     state={
         
     }
+    
     handleChange = (event) =>{
         this.setState({
             ...this.state,
@@ -16,7 +17,7 @@ class FormInput extends Component{
           event.preventDefault()
           this.props.handleCreate(this.state)
       }
-      
+
     render(){
         return(
             <form>
