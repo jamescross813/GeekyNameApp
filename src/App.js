@@ -32,7 +32,7 @@ class App extends Component {
       };
     fetch("http://localhost:3000/login", configObj)
     .then((r) => r.json())
-    .then(data=> console.log(data));
+    .then(data=> <UserHomepageContainer data={data}/>);
     }
   
 
