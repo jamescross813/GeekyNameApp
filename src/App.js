@@ -35,10 +35,12 @@ class App extends Component {
     };
     fetch("http://localhost:3000/login", configObj)
       .then((r) => r.json())
-      .then(data=> this.setState({
+      .then(data=> console.log(this.setState({
         user: data
-      })
+      }))
+      
     )
+    // (this.state.user)
   }
 
   render() {
