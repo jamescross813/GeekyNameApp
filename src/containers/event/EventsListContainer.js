@@ -41,8 +41,8 @@ class EventsListContainer extends Component{
         return(
             this.state.events.map((event)=>{
                 if(event.id === id){
-                    // return <EventsList eventInfo={event} />
-                    console.log(event)
+                    return <EventsList eventInfo={event} />
+                    // console.log(event)
                 }
             })
         )
