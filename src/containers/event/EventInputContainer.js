@@ -11,7 +11,7 @@ class EventInputContainer extends Component{
                 description: formData.description,
                 est_time: formData.est_time,
                 game_type: formData.game_type,
-                user_id: this.props.user.user.id
+                user_id: this.props.userInfo.user.id
             },
           }
           let configObj = {
@@ -39,7 +39,7 @@ class EventInputContainer extends Component{
 }
 
 const mapStateToProps=(state)=>{
-    return{user: state.user}
+    return{userInfo: state.userInfo}
 }
 
 export default connect(mapStateToProps)(EventInputContainer)
