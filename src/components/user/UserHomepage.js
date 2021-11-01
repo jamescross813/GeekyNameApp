@@ -17,7 +17,7 @@ class UserHomepage extends Component{
                 <h3>My Events</h3>
                     <EventsListContainer />
                 <h3>My Friends</h3>
-                    {/* <FriendsListContainer /> */}
+                    <FriendsListContainer />
                 <h3>My Groups</h3>
                     {/* <GroupsListContainer /> */}
         </div>
