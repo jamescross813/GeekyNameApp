@@ -18,8 +18,9 @@ class FriendsListContainer extends Component{
     }
 
     gatherList=()=>(
+        // console.log(this.props.userInfo.user.id)
         this.state.friends.map((friend)=>{
-            if(friend.user_id === this.props.user.user.id) {
+            if(friend.user_id === this.props.userInfo.user.id) {
                 return this.gatherListInfo(friend.friend_user_id)
                 // console.log(this.props.user.user.id)
             }            
@@ -28,8 +29,9 @@ class FriendsListContainer extends Component{
     )
 
     gatherListInfo = (id)=>{
+        // console.log(this.props.usersInfo.users)
         return(
-        this.props.users.users.map((user)=>{
+        this.props.usersInfo.users.map((user)=>{
             if(id === user.id){
                 // console.log(user.username)
                 return <FriendsList friendInfo={user} />
