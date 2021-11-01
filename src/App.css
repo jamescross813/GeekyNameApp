@@ -11,4 +11,12 @@ body {
   text-align: center;
 }
 
+.navbar a{
+  color:white;
+  margin: 10px;
+}
+
+.navbar a.active{
+  color: chartreuse
+}
 
