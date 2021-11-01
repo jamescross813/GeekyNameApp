@@ -12,5 +12,14 @@ class FriendsContainer extends Component{
     }
 }
 
-export default connect()(FriendsContainer)
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        setFriendsInfo: (friends) => dispatch({
+          type: "ADD_USERS",
+          friendData: friends
+        })
+      };
+}
+
+export default connect(null, mapDispatchToProps)(FriendsContainer)
 
