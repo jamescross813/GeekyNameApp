@@ -15,7 +15,7 @@ class UserHomepage extends Component{
         <div>
             <h2>Welcome {this.props.userInfo.username}!</h2>
                 <h3>My Events</h3>
-                    {/* <EventsListContainer /> */}
+                    <EventsListContainer />
                 <h3>My Friends</h3>
                     {/* <FriendsListContainer /> */}
                 <h3>My Groups</h3>

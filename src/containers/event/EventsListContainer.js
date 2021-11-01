@@ -18,6 +18,7 @@ class EventsListContainer extends Component{
     }
 
     gatherList=()=>(
+        
         this.state.events.map((event)=>{
             if(event.user_events.length>0){
                 return this.gatherListInfo(event.user_events)
@@ -29,7 +30,7 @@ class EventsListContainer extends Component{
     gatherListInfo = (events)=>{
         return(
             events.map((event)=>{
-                if(event.user_id === this.props.user.user.id){
+                if(event.user_id === this.props.userInfo.user.id){
                     return this.finalListInfo(event.event_id)
                 }
             })
@@ -60,8 +61,8 @@ class EventsListContainer extends Component{
 
 const mapStateToProps=(state)=>{
     return{
-        user: state.user,
-        users: state.users
+        userInfo: state.userInfo,
+        usersInfo: state.usersInfo
     }
 }
 
