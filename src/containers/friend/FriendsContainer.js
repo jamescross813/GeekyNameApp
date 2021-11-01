@@ -6,7 +6,7 @@ class FriendsContainer extends Component{
     fetchFriends=()=>{
         fetch("http://localhost:3000/friends")
         .then(r=>r.json())
-        .then(data=>this.props.setFriendsInfo(data))
+        // .then(data=>this.props.setFriendsInfo(data))
     }
 
     render(){
@@ -21,7 +21,7 @@ class FriendsContainer extends Component{
 const mapDispatchToProps=(dispatch)=>{
     return {
         setFriendsInfo: (friends) => dispatch({
-          type: "ADD_FRIENDS",
+          type: "ADD_FRIEND",
           friendData: friends
         })
       };
