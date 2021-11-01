@@ -5,12 +5,13 @@ import {connect} from "react-redux"
 // import FriendsContainer from "../friend/FriendsContainer";
 
 class UserHomepageContainer extends Component{
-    
+
     render(){
         return(
         <div>
-          <UserHomepage userInfo={this.props.user}/>
-          {/* {console.log(this.props.user)} */}
+          {/* {console.log(this.props.userInfo.user)} */}
+          <UserHomepage userInfo={this.props.userInfo.user}/>
+          {/* {this.getInfo()} */}
           {/* <FriendsContainer /> */}
         </div>
         )
@@ -19,8 +20,8 @@ class UserHomepageContainer extends Component{
 
 const mapStateToProps=(state)=>{
     return{
-      user: state.user,
-      users: state.users}
+      userInfo: state.userInfo,
+      usersInfo: state.usersInfo}
   }
 
 export default connect(mapStateToProps)(UserHomepageContainer)
