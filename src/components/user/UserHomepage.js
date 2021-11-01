@@ -11,21 +11,15 @@ import GroupsListContainer from "../../containers/group/GroupsListContainer"
 
 class UserHomepage extends Component{
     render(){
-        // {console.log(this.props)}
         return(
         <div>
-            
-            <h2>Welcome {this.props.userInfo.user.username}!</h2>
-            {/* {console.log(this.props.userInfo.user.username)} */}
-            {/* <EventsPageContainer /> */}
-            <h3>My Events</h3>
-            <EventsListContainer />
-            {/* <FriendsPageContainer /> */}
-            <h3>My Friends</h3>
-            <FriendsListContainer />
-            {/* <GroupsPageContainer /> */}
-            <h3>My Groups</h3>
-            <GroupsListContainer />
+            <h2>Welcome {this.props.userInfo.username}!</h2>
+                <h3>My Events</h3>
+                    {/* <EventsListContainer /> */}
+                <h3>My Friends</h3>
+                    {/* <FriendsListContainer /> */}
+                <h3>My Groups</h3>
+                    {/* <GroupsListContainer /> */}
         </div>
         )
     }
