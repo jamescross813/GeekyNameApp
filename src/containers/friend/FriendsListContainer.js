@@ -10,11 +10,12 @@ class FriendsListContainer extends Component{
     componentDidMount(){
         fetch("http://localhost:3000/friends")
         .then(resp=>resp.json())
-        .then(data=>{
-            this.setState({
-                friends: data
-            })
-        })
+        // .then(data=>{
+        //     this.setState({
+        //         friends: data
+        //     })
+        // })
+        .then(data=>this.props.setFriendsInfo(data))
     }
 
     gatherList=()=>(
@@ -54,4 +55,13 @@ const mapStateToProps=(state)=>{
     }
 }
 
-export default connect(mapStateToProps)(FriendsListContainer)
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        setFriendsInfo: (friends) => dispatch({
+          type: "ADD_FRIEND",
+          friendData: friends
+        })
+      };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FriendsListContainer)
