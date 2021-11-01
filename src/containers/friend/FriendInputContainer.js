@@ -8,7 +8,7 @@ class EventInputContainer extends Component{
         let friendInfo = {
             friend: {
                 username: formData.username,
-                user_id: this.props.user.user.id
+                user_id: this.props.userInfo.user.id
             },
           }
           let configObj = {
@@ -36,7 +36,7 @@ class EventInputContainer extends Component{
 }
 
 const mapStateToProps=(state)=>{
-    return{user: state.user}
+    return{userInfo: state.userInfo}
 }
 
 export default connect(mapStateToProps)(EventInputContainer)
