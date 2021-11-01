@@ -19,7 +19,7 @@ class UserHomepage extends Component{
                 <h3>My Friends</h3>
                     <FriendsListContainer />
                 <h3>My Groups</h3>
-                    {/* <GroupsListContainer /> */}
+                    <GroupsListContainer />
         </div>
         )
     }
