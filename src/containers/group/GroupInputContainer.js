@@ -27,6 +27,7 @@ class GroupInputContainer extends Component{
     }
 
     render(){
+        console.log(this.props)
         return(
             <div>
                 <GroupInput handleCreate={this.createGroup}/>
@@ -36,7 +37,11 @@ class GroupInputContainer extends Component{
 }
 
 const mapStateToProps=(state)=>{
-    return{user: state.user}
+    // console.log(state)
+    return{
+        user: state.user,
+        friends: state.friends
+    }
 }
 
 export default connect(mapStateToProps)(GroupInputContainer)
