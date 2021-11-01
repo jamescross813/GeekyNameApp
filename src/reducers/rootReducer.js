@@ -4,9 +4,9 @@ import usersReducer from "./usersReducer";
 import friendsReducer from "./friendsReducer";
 
 const rootReducer = combineReducers({
-    user: userReducer,
-    users: usersReducer,
-    friends: friendsReducer
+  userInfo: userReducer,
+  usersInfo: usersReducer,
+  friendsInfo: friendsReducer
   });
   
   export default rootReducer;
