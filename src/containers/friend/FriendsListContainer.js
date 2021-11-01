@@ -3,31 +3,46 @@ import FriendsList from "../../components/friend/FriendsList";
 import {connect} from "react-redux"
 
 class FriendsListContainer extends Component{
-    
+    state={
+        friends: []
+    }
+
     componentDidMount(){
         fetch("http://localhost:3000/friends")
         .then(resp=>resp.json())
         .then(data=>{
-            if(data.id===this.props.user.user.id){
-            this.props.setFriendsInfo(data)
-            }
+            this.setState({
+                friends: data
+            })
         })
-        
     }
 
     gatherList=()=>(
-        // console.log(this.props.friends.friends.friends)
-        this.props.friends.friends.friends.map((friend)=>{
-            return <FriendsList friendInfo={this.props.friends} />
+        this.state.friends.map((friend)=>{
+            if(friend.user_id === this.props.user.user.id) {
+                return this.gatherListInfo(friend.friend_user_id)
+                // console.log(this.props.user.user.id)
+            }            
+            
         })
     )
+
+    gatherListInfo = (id)=>{
+        return(
+        this.props.users.users.map((user)=>{
+            if(id === user.id){
+                // console.log(user.username)
+                return <FriendsList friendInfo={user} />
+            } 
+        })
+        )
+    }     
 
     render(){
         return(
         <div>
             {this.gatherList()}
             {/* {console.log(this.props)} */}
-            {/* <FriendsList friendInfo={this.props.friends} /> */}
         </div>
         )
     }
@@ -36,18 +51,8 @@ class FriendsListContainer extends Component{
 const mapStateToProps=(state)=>{
     return{
         user: state.user,
-        users: state.users,
-        friends: state.friends
+        users: state.users
     }
 }
 
-const mapDispatchToProps=(dispatch)=>{
-    return {
-        setFriendsInfo: (friends) => dispatch({
-          type: "ADD_FRIEND",
-          friendData: friends
-        })
-      };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FriendsListContainer)
+export default connect(mapStateToProps)(FriendsListContainer)
