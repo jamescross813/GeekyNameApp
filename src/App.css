@@ -8,8 +8,8 @@ body {
   width: 350px;
   background-color: cadetblue;
   padding: 0 20px;
-  /* text-align: center;
-  position: absolute;
+  text-align: center;
+  /* position: absolute;
   left: 100px;
   top: 10px; */
 }
@@ -27,10 +27,10 @@ body {
   width: 350px;
   background-color: cadetblue;
   padding: 0 20px;
-  /* text-align: center;
-  position:absolute;
+  text-align: center;
+  /* position:absolute;
   left: 100px;
-  top: 50px */
+  top: 50px  */
 }
 
 .homepageNavBar a{
