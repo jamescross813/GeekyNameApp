@@ -8,7 +8,7 @@ class GroupInputContainer extends Component{
         let groupInfo = {
             group: {
                 group_name: formData.group_name,
-                user_id: this.props.user.user.id
+                user_id: this.props.userInfo.user.id
             },
           }
           let configObj = {
@@ -39,8 +39,8 @@ class GroupInputContainer extends Component{
 const mapStateToProps=(state)=>{
     // console.log(state)
     return{
-        user: state.user,
-        friends: state.friends
+        userInfo: state.userInfo,
+        friendsInfo: state.friendsInfo
     }
 }
 
