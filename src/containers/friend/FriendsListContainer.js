@@ -21,24 +21,22 @@ class FriendsListContainer extends Component{
         // console.log(this.props.userInfo.user.id)
         this.state.friends.map((friend)=>{
             if(friend.user_id === this.props.userInfo.user.id) {
-                return this.gatherListInfo(friend.friend_user_id)
+                return this.props.setFriendsInfo(friend.friend_user_id)
                 // console.log(this.props.user.user.id)
             }            
             
         })
     )
 
-    gatherListInfo = (id)=>{
-        // console.log(this.props.usersInfo.users)
-        return(
-        this.props.usersInfo.users.map((user)=>{
-            if(id === user.id){
-                // console.log(user.username)
-                // return <FriendsList friendInfo={user} />
-            } 
-        })
-        )
-    }     
+    // gatherListInfo = (id)=>{
+    //     // console.log(this.props.usersInfo.users)
+    //     return this.props.usersInfo.users.map((friendlyuser)=>{
+    //         if(friendlyuser.id === id){
+    //             console.log(friendlyuser.id)
+    //             return this.props.setFriendsInfo(friendlyuser.id)
+    //         }
+    //     })
+    // }     
 
     render(){
         return(
