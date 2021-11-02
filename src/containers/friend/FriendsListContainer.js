@@ -33,7 +33,7 @@ class FriendsListContainer extends Component{
         return(
         this.props.usersInfo.users.map((user)=>{
             if(id === user.id){
-                console.log(user.username)
+                // console.log(user.username)
                 // return <FriendsList friendInfo={user} />
             } 
         })
@@ -44,7 +44,8 @@ class FriendsListContainer extends Component{
         return(
         <div>
             {this.gatherList()}
-            {/* {console.log(this.props)} */}
+            {console.log(this.props)}
+            {/* <FriendsList friendInfo={user} /> */}
         </div>
         )
     }
@@ -60,7 +61,7 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
     return {
-        setUsersInfo: (friend) => dispatch({
+        setFriendsInfo: (friend) => dispatch({
           type: "ADD_FRIEND",
           friendData: friend
         })
