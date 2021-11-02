@@ -6,7 +6,7 @@ class FriendsContainer extends Component{
     fetchFriends=()=>{
         fetch("http://localhost:3000/friends")
         .then(r=>r.json())
-        .then(data=>this.props.setFriendsInfo(data))
+        .then(data=> this.setFriendsInfo(data))
     }
 
     render(){
