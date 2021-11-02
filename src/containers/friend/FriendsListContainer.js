@@ -33,8 +33,8 @@ class FriendsListContainer extends Component{
         return(
         this.props.usersInfo.users.map((user)=>{
             if(id === user.id){
-                // console.log(user.username)
-                return <FriendsList friendInfo={user} />
+                console.log(user.username)
+                // return <FriendsList friendInfo={user} />
             } 
         })
         )
