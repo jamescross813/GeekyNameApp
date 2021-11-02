@@ -55,7 +55,8 @@ class GroupsListContainer extends Component{
 const mapStateToProps=(state)=>{
     return{
         userInfo: state.userInfo,
-        usersInfo: state.usersInfo
+        usersInfo: state.usersInfo,
+        freindInfo: state.friendsInfo
     }
 }
 
