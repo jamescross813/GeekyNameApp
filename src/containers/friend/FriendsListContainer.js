@@ -58,4 +58,13 @@ const mapStateToProps=(state)=>{
     }
 }
 
-export default connect(mapStateToProps)(FriendsListContainer)
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        setUsersInfo: (friend) => dispatch({
+          type: "ADD_FRIEND",
+          friendData: friend
+        })
+      };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FriendsListContainer)
