@@ -30,9 +30,9 @@ class SignupFormContainer extends Component {
 
     render() {  
         return (
-         <div>
-           <SignupForm handleLogin={this.login} />
-         </div>
+          <div>
+            <SignupForm handleLogin={this.login} />
+          </div>
         );
       }
 };
