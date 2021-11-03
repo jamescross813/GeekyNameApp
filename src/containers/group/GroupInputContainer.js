@@ -4,6 +4,10 @@ import {connect} from "react-redux"
 
 class GroupInputContainer extends Component{
 
+    state={
+        friends: []
+    }
+
     createGroup=(formData)=>{
         let groupInfo = {
             group: {
@@ -25,21 +29,34 @@ class GroupInputContainer extends Component{
             .then(this.props.history.push("/groups"))
     }
 
-    gatherFriendsList=()=>{
+    componentDidMount=()=>{
         return(
             this.props.friendsInfo.friends.map((friend)=>{
                 if(friend.user_id === this.props.userInfo.user.id) {
-                    // return this.gatherFriendsListInfo(friend.friend_user_id)
-                    console.log(friend)
+                    return this.gatherListInfo(friend.friend_user_id)
                 }           
             })  
         )
     }
 
+    gatherListInfo=(id)=>{
+        return(
+            this.props.usersInfo.users.map((user)=>{
+                if(id === user.id){
+                    return(
+                        this.setState(prevState=>({
+                            friends: [...prevState.friends, user]
+                        })
+                    )
+                    )} 
+            })
+        )
+    }   
+
     render(){
         return(
             <div>
-                <GroupInput handleCreate={this.createGroup} friends={this.props.friendsInfo}/>
+                <GroupInput handleCreate={this.createGroup} friends={this.state.friends}/>
             </div>
         )
     }
@@ -48,6 +65,7 @@ class GroupInputContainer extends Component{
 const mapStateToProps=(state)=>{
     return{
         userInfo: state.userInfo,
+        usersInfo: state.usersInfo,
         friendsInfo: state.friendsInfo
     }
 }
