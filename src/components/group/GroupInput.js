@@ -23,9 +23,6 @@ class GroupInput extends Component{
             <form onSubmit={this.handleSubmit}>
                 <label>Group Name:</label>
                 <input type="text" name="group_name" value={this.state.group_name} onChange={this.handleChange} /><br/>
-                {/* {this.props.friends.map((friend)=>{})} */}
-                
-                {this.props.friends.map((friend)=>{<input type="checkbox" name={friend.username}/>})}
                 <input type="submit"/>
             </form>
         )
