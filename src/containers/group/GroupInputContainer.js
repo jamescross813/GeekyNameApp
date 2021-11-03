@@ -21,7 +21,6 @@ class GroupInputContainer extends Component{
           };
           fetch("http://localhost:3000/groups", configObj)
             .then((r) => r.json())
-            // .then((r)=>console.log(r))
             .then(data=>console.log(data))
             .then(this.props.history.push("/groups"))
     }
@@ -37,7 +36,6 @@ class GroupInputContainer extends Component{
 }
 
 const mapStateToProps=(state)=>{
-    // console.log(state)
     return{
         userInfo: state.userInfo,
         friendsInfo: state.friendsInfo
