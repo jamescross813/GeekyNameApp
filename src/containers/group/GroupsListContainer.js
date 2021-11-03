@@ -41,6 +41,7 @@ class GroupsListContainer extends Component{
             this.state.groups.map((group)=>{
                 if(group.id === id){
                     return <GroupsList groupInfo={group} />
+                    // console.log(group)
                 }
             })
         )
