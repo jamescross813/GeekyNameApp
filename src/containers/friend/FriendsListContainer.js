@@ -8,7 +8,6 @@ class FriendsListContainer extends Component{
         fetch("http://localhost:3000/friends")
         .then(resp=>resp.json())
         .then(data=>this.props.setFriendsInfo(data))
-        // .then(data=>console.log(data))
     }
 
         gatherList=()=>(

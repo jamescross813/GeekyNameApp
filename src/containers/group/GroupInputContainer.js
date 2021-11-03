@@ -29,7 +29,7 @@ class GroupInputContainer extends Component{
         console.log(this.props)
         return(
             <div>
-                <GroupInput handleCreate={this.createGroup}/>
+                <GroupInput handleCreate={this.createGroup} friends={this.props.friendsInfo}/>
             </div>
         )
     }
