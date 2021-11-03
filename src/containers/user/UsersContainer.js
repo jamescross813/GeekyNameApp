@@ -7,7 +7,6 @@ class UsersContainer extends Component{
         fetch("http://localhost:3000/users")
         .then(r=>r.json())
         .then(data=>this.props.setUsersInfo(data))
-        // .then(data=>console.log(data))
     }
 
     render(){
