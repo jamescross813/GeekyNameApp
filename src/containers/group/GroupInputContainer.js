@@ -25,8 +25,18 @@ class GroupInputContainer extends Component{
             .then(this.props.history.push("/groups"))
     }
 
+    gatherFriendsList=()=>{
+        return(
+            this.props.friendsInfo.friends.map((friend)=>{
+                if(friend.user_id === this.props.userInfo.user.id) {
+                    // return this.gatherFriendsListInfo(friend.friend_user_id)
+                    console.log(friend)
+                }           
+            })  
+        )
+    }
+
     render(){
-        console.log(this.props)
         return(
             <div>
                 <GroupInput handleCreate={this.createGroup} friends={this.props.friendsInfo}/>

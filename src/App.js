@@ -13,6 +13,7 @@ import NavBar from "./components/navbar/NavBar";
 import EventInputContainer from "./containers/event/EventInputContainer";
 import FriendInputContainer from "./containers/friend/FriendInputContainer";
 import GroupInputContainer from "./containers/group/GroupInputContainer"
+import FriendsContainer from "./containers/friend/FriendsContainer";
 
 class App extends Component { 
  
@@ -21,6 +22,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <UsersContainer/>
+          <FriendsContainer />
           <NavBar />
           <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
           <Route to exact path="/signup" render={routerprops=><SignupFormContainer {...routerprops}/>}/>

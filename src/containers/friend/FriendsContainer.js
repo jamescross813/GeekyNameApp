@@ -2,17 +2,17 @@ import { Component } from "react";
 import { connect } from "react-redux"
 
 class FriendsContainer extends Component{
-
-    fetchFriends=()=>{
+    
+    componentDidMount(){
         fetch("http://localhost:3000/friends")
-        .then(r=>r.json())
-        .then(data=> this.setFriendsInfo(data))
+        .then(resp=>resp.json())
+        .then(data=>this.props.setFriendsInfo(data))
     }
 
     render(){
         return(
         <div>
-            {this.fetchFriends()}
+            
         </div>
         )
     }
