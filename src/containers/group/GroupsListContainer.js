@@ -22,21 +22,24 @@ class GroupsListContainer extends Component{
         this.state.groups.map((group)=>{
             return(
                 this.gatherListInfo(group.user_groups)
+                // console.log(group.user_groups)
                 )
             }             
         )
     )
 
     gatherListInfo=(userGroup)=>(
-        // console.log(userGroup)
-        userGroup.map((group)=>this.finalInfo(group.id))
+        userGroup.map((group)=>{
+            if(group.user_id === this.props.userInfo.user.id){
+                return this.finalInfo(group.id)
+            }
+        })
     )
 
     finalInfo=(id)=>{
         return(
             this.state.groups.map((group)=>{
                 if(group.id === id){
-                    // console.log(group)
                     return <GroupsList groupInfo={group} />
                 }
             })
@@ -54,8 +57,7 @@ class GroupsListContainer extends Component{
 
 const mapStateToProps=(state)=>{
     return{
-        userInfo: state.userInfo,
-        usersInfo: state.usersInfo
+        userInfo: state.userInfo
     }
 }
 
