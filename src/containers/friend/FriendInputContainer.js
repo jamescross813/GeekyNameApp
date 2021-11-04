@@ -1,6 +1,7 @@
 import { Component } from "react";
 import FriendInput from "../../components/friend/FriendInput"
 import {connect} from "react-redux"
+import FriendsContainer from "./FriendsContainer";
 
 class EventInputContainer extends Component{
 
@@ -22,7 +23,7 @@ class EventInputContainer extends Component{
           fetch("http://localhost:3000/friends", configObj)
             .then((r) => r.json())
             // .then((r)=>console.log(r))
-            .then(data=>console.log(data))
+            .then(data=>this.newFriend(data))
             .then(this.props.history.push("/friends"))
         }
 
