@@ -13,7 +13,6 @@ import NavBar from "./components/navbar/NavBar";
 import EventInputContainer from "./containers/event/EventInputContainer";
 import FriendInputContainer from "./containers/friend/FriendInputContainer";
 import GroupInputContainer from "./containers/group/GroupInputContainer"
-import FriendsContainer from "./containers/friend/FriendsContainer";
 
 class App extends Component { 
  
