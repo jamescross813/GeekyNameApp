@@ -22,7 +22,6 @@ class App extends Component {
       <Router>
         <div className="App">
           <UsersContainer/>
-          <FriendsContainer />
           <NavBar />
           <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
           <Route to exact path="/signup" render={routerprops=><SignupFormContainer {...routerprops}/>}/>
