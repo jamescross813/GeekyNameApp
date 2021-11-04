@@ -28,7 +28,6 @@ class FriendsListContainer extends Component{
         render(){
             return(
                 <div>
-                    {console.log(this.props.friendsInfo)}
                    
                 </div>
                 )
