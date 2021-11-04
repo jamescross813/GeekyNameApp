@@ -11,7 +11,7 @@ class InfoContainer extends Component{
             <div>
                 <UsersContainer />
                 <FriendsContainer />
-                <Link to="/"><button>Enter Here</button></Link>
+                <UserHomepageContainer />
             </div>
         )
     }
