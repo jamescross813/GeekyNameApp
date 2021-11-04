@@ -3,7 +3,8 @@ import { Component } from "react";
 class GroupInput extends Component{
 
     state={
-        group_name: ""
+        group_name: "",
+        friends:[]
     }
 
     handleChange = (event) =>{
