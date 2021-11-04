@@ -15,6 +15,17 @@ class FriendsContainer extends Component{
         }))
     }
 
+    gatherList=()=>{
+        
+        return(
+            this.state.friends.map((friend)=>{
+                if(friend.user_id === this.props.userInfo.user.id) {
+                    console.log(friend)
+                }           
+            })
+        )
+    }
+
     render(){
         return(
         <div>
