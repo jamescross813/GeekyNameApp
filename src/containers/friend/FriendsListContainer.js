@@ -16,7 +16,6 @@ class FriendsListContainer extends Component{
             return(
                 <div>
                    {this.gatherList()}
-                   {console.log(this.props.friendsInfo.friends)}
                 </div>
                 )
         }
