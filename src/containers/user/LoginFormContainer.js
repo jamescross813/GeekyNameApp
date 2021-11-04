@@ -4,7 +4,6 @@ import UserHomepageContainer from "./UserHomepageContainer";
 import { connect } from 'react-redux';
 import LoginForm from "../../components/user/LoginForm";
 
-
 class LoginFormContainer extends Component {
 
     login = (userData) =>{
@@ -26,7 +25,7 @@ class LoginFormContainer extends Component {
                   .then((r) => r.json())
                   .then(data=> this.props.setUserInfo(data)) 
                   // .then(console.log(this.props))   
-                  .then(this.props.history.push("/homepage"))
+                  .then(this.props.history.push("/user"))
     }
 
     render() {  

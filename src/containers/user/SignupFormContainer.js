@@ -4,7 +4,6 @@ import UserHomepageContainer from "./UserHomepageContainer";
 import { connect } from 'react-redux';
 import SignupForm from "../../components/user/LoginForm";
 
-
 class SignupFormContainer extends Component {
 
     login = (userData) =>{
@@ -25,7 +24,7 @@ class SignupFormContainer extends Component {
                 fetch("http://localhost:3000/users", configObj)
                   .then((r) => r.json())
                   .then(data=> this.props.setUserInfo(data))   
-                  .then(this.props.history.push("/homepage"))
+                  .then(this.props.history.push("/user"))
     }
 
     render() {  
