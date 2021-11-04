@@ -26,7 +26,7 @@ class App extends Component {
           <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
           <Route to exact path="/signup" render={routerprops=><SignupFormContainer {...routerprops}/>}/>
           <Route to exact path="/login" render={routerprops=><LoginFormContainer {...routerprops} />}/>
-          <Route to path="/user" render={routerprops=><UserHomepageContainer {...routerprops} userData={this.state}/>} />
+         
           <Route to path="/groups" render={routerprops=><GroupsPageContainer {...routerprops}/>} />
           <Route to path="/friends" render={routerprops=><FriendsPageContainer {...routerprops}/>}/>
           <Route to path="/events" render={routerprops =><EventsPageContainer {...routerprops} />}/>
