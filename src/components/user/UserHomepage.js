@@ -1,12 +1,14 @@
 // include navbar
 // render friends, groups, events, avialability
 import { Component } from "react";
+import {Link } from "react-router-dom"
 import EventsListContainer from "../../containers/event/EventsListContainer"
 import FriendsListContainer from "../../containers/friend/FriendsListContainer"
 import GroupsListContainer from "../../containers/group/GroupsListContainer"
 // import EventsPageContainer from "../../containers/event/EventsPageContainer"
 // import FriendsPageContainer from "../../containers/friend/FriendsPageContainer";
 // import GroupsPageContainer from "../../containers/group/GroupsPageContainer";
+import FriendsContainer from "../../containers/friend/FriendsContainer";
 
 class UserHomepage extends Component{
     render(){
@@ -16,7 +18,8 @@ class UserHomepage extends Component{
                 <h3>My Events</h3>
                     <EventsListContainer />
                 <h3>My Friends</h3>
-                    <FriendsListContainer />
+                    <FriendsContainer />
+                    {/* <FriendsListContainer /> */}
                 <h3>My Groups</h3>
                     <GroupsListContainer />
         </div>
