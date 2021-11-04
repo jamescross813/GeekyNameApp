@@ -23,6 +23,7 @@ class FriendsContainer extends Component{
             return this.props.usersInfo.users.map((user)=>{
                         if(id === user.id){
                             return this.props.setFriendsInfo(user)
+                            // console.log(user)
                         } 
                     })
         }  
@@ -30,7 +31,7 @@ class FriendsContainer extends Component{
     render(){
         return(
         <div>
-            {console.log(this.props.friendsInfo.friends)}
+            {/* {console.log(this.props.friendsInfo.friends)} */}
         </div>
         )
     }

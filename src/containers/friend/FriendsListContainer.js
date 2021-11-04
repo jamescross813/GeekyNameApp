@@ -4,32 +4,32 @@ import {connect} from "react-redux"
 
 class FriendsListContainer extends Component{
 
-        gatherList=()=>{
-            // console.log(this.props.friendsInfo.friends)
-            // return(
-            //     this.props.friendsInfo.friends.map((friend)=>{
-            //         if(friend.user_id === this.props.userInfo.user.id) {
-            //             return this.gatherListInfo(friend.friend_user_id)
-            //         }           
-            //     })
-            // )
-        }
+        // gatherList=()=>{
+        //     // console.log(this.props.friendsInfo.friends)
+        //     // return(
+        //     //     this.props.friendsInfo.friends.map((friend)=>{
+        //     //         if(friend.user_id === this.props.userInfo.user.id) {
+        //     //             return this.gatherListInfo(friend.friend_user_id)
+        //     //         }           
+        //     //     })
+        //     // )
+        // }
 
-        gatherListInfo = (id)=>{
-            return(
-                this.props.usersInfo.users.map((user)=>{
-                    if(id === user.id){
-                        return <FriendsList friendInfo={user} />
-                    } 
-                })
-            )
-        }   
+        // gatherListInfo = (id)=>{
+        //     return(
+        //         this.props.usersInfo.users.map((user)=>{
+        //             if(id === user.id){
+        //                 return <FriendsList friendInfo={user} />
+        //             } 
+        //         })
+        //     )
+        // }   
     
         render(){
             return(
                 <div>
                     {console.log(this.props.friendsInfo)}
-                    {this.gatherList()}
+                   
                 </div>
                 )
         }
@@ -42,14 +42,5 @@ class FriendsListContainer extends Component{
             friendsInfo: state.friendsInfo
         }
     }
-
-    const mapDispatchToProps=(dispatch)=>{
-        return {
-            setFriendsInfo: (friends) => dispatch({
-              type: "ADD_FRIEND",
-              friendData: friends
-            })
-          };
-    }
     
-    export default connect(mapStateToProps, mapDispatchToProps)(FriendsListContainer)
+    export default connect(mapStateToProps)(FriendsListContainer)
