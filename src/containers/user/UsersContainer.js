@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { connect } from "react-redux"
-import FriendsContainer from "../friend/FriendsContainer";
 
 class UsersContainer extends Component{
 
@@ -14,7 +13,6 @@ class UsersContainer extends Component{
         return(
             <div>
                 {this.fetchUsers()}
-                <FriendsContainer />
             </div>
         )
     }
