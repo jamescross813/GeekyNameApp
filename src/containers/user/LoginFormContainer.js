@@ -26,7 +26,7 @@ class LoginFormContainer extends Component {
                   .then((r) => r.json())
                   .then(data=> this.props.setUserInfo(data)) 
                   // .then(console.log(this.props))   
-                  .then(this.props.history.push("/user"))
+                  .then(this.props.history.push("/homepage"))
     }
 
     render() {  
