@@ -1,7 +1,6 @@
 // include navbar
 // render friends, groups, events, avialability
 import { Component } from "react";
-
 import EventsListContainer from "../../containers/event/EventsListContainer"
 import FriendsListContainer from "../../containers/friend/FriendsListContainer"
 import GroupsListContainer from "../../containers/group/GroupsListContainer"
