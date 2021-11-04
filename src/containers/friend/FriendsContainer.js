@@ -10,26 +10,32 @@ class FriendsContainer extends Component{
     componentDidMount(){
         fetch("http://localhost:3000/friends")
         .then(resp=>resp.json())
-        .then(data=>this.setState({
-            friends: data
-        }))
-    }
-
-    gatherList=()=>{
-        
-        return(
-            this.state.friends.map((friend)=>{
-                if(friend.user_id === this.props.userInfo.user.id) {
-                    console.log(friend)
-                }           
-            })
+        .then(data=>data.map((friend)=>{
+                    if(friend.user_id === this.props.userInfo.user.id) {
+                        return this.gatherListInfo(friend.friend_user_id)
+                    }
+                }
+            )
         )
     }
+    
+        gatherListInfo = (id)=>{
+            return(
+                this.props.usersInfo.users.map((user)=>{
+                    if(id === user.id){
+                        this.props.setFriendsInfo(user)
+                    } 
+                })
+            )
+        }  
+    
+
+    
 
     render(){
         return(
         <div>
-            {console.log(this.state.friends)}
+            
         </div>
         )
     }
