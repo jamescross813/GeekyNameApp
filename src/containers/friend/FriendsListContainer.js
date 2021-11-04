@@ -4,16 +4,9 @@ import {connect} from "react-redux"
 
 class FriendsListContainer extends Component{
 
-        // gatherList=()=>{
-        //     // console.log(this.props.friendsInfo.friends)
-        //     // return(
-        //     //     this.props.friendsInfo.friends.map((friend)=>{
-        //     //         if(friend.user_id === this.props.userInfo.user.id) {
-        //     //             return this.gatherListInfo(friend.friend_user_id)
-        //     //         }           
-        //     //     })
-        //     // )
-        // }
+        gatherList=()=>{
+            console.log(this.props)
+        }
 
         // gatherListInfo = (id)=>{
         //     return(
@@ -28,7 +21,7 @@ class FriendsListContainer extends Component{
         render(){
             return(
                 <div>
-                   
+                   {this.gatherList()}
                 </div>
                 )
         }
