@@ -6,13 +6,13 @@ class FriendsListContainer extends Component{
 
         gatherList=()=>{
             // console.log(this.props.friendsInfo.friends)
-            return(
-                this.props.friendsInfo.friends.map((friend)=>{
-                    if(friend.user_id === this.props.userInfo.user.id) {
-                        return this.gatherListInfo(friend.friend_user_id)
-                    }           
-                })
-            )
+            // return(
+            //     this.props.friendsInfo.friends.map((friend)=>{
+            //         if(friend.user_id === this.props.userInfo.user.id) {
+            //             return this.gatherListInfo(friend.friend_user_id)
+            //         }           
+            //     })
+            // )
         }
 
         gatherListInfo = (id)=>{
@@ -28,6 +28,7 @@ class FriendsListContainer extends Component{
         render(){
             return(
                 <div>
+                    {console.log(this.props.friendsInfo)}
                     {this.gatherList()}
                 </div>
                 )
