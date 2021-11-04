@@ -13,6 +13,7 @@ import NavBar from "./components/navbar/NavBar";
 import EventInputContainer from "./containers/event/EventInputContainer";
 import FriendInputContainer from "./containers/friend/FriendInputContainer";
 import GroupInputContainer from "./containers/group/GroupInputContainer"
+import InfoContainer from "./containers/info/InfoContainer";
 
 class App extends Component { 
  
@@ -20,8 +21,8 @@ class App extends Component {
     return(
       <Router>
         <div className="App">
-          <UsersContainer/>
           <NavBar />
+          <Route to exact path = "/homepage" render={routerprops=><InfoContainer {...routerprops}/>}/>
           <Route to exact path = "/" render={routerprops=><Homepage {...routerprops}/>}/>
           <Route to exact path="/signup" render={routerprops=><SignupFormContainer {...routerprops}/>}/>
           <Route to exact path="/login" render={routerprops=><LoginFormContainer {...routerprops} />}/>
