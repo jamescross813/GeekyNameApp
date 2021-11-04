@@ -39,4 +39,13 @@ const mapStateToProps=(state)=>{
     return{userInfo: state.userInfo}
 }
 
-export default connect(mapStateToProps)(EventInputContainer)
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        setFriendsInfo: (friends) => dispatch({
+          type: "ADD_FRIEND",
+          friendData: friends
+        })
+      };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EventInputContainer)
