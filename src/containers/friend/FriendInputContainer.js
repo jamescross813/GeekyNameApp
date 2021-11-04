@@ -27,6 +27,15 @@ class EventInputContainer extends Component{
             .then(this.props.history.push("/friends"))
         }
 
+
+        newFriend = (friend)=>{
+            return this.props.usersInfo.users.map((user)=>{
+                        if(friend.friend_user_id === user.id){
+                            return this.props.setFriendsInfo(user)
+                            // console.log(user)
+                        } 
+                    })
+        }  
     render(){
         return(
             <div>
@@ -37,7 +46,10 @@ class EventInputContainer extends Component{
 }
 
 const mapStateToProps=(state)=>{
-    return{userInfo: state.userInfo}
+    return{
+        userInfo: state.userInfo,
+        usersInfo: state.usersInfo
+}
 }
 
 const mapDispatchToProps=(dispatch)=>{
