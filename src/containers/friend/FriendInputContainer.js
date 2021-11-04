@@ -22,7 +22,6 @@ class EventInputContainer extends Component{
           };
           fetch("http://localhost:3000/friends", configObj)
             .then((r) => r.json())
-            // .then((r)=>console.log(r))
             .then(data=>this.newFriend(data))
             .then(this.props.history.push("/friends"))
         }
@@ -32,7 +31,6 @@ class EventInputContainer extends Component{
             return this.props.usersInfo.users.map((user)=>{
                         if(friend.friend_user_id === user.id){
                             return this.props.setFriendsInfo(user)
-                            // console.log(user)
                         } 
                     })
         }  
