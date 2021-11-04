@@ -12,18 +12,26 @@ class FriendsContainer extends Component{
         .then(resp=>resp.json())
         .then(data=>data.map((friend)=>{
                     if(friend.user_id === this.props.userInfo.user.id) {
-                        return this.gatherListInfo(friend.friend_user_id)
+                        return this.gatherList(friend.friend_user_id)
                     }
                 }
             )
         )
     }
     
-        gatherListInfo = (id)=>{
+        gatherList = (id)=>{
+            return this.props.friendsInfo.friends.map((friend)=>{
+                if(friend.id!== id){
+                    return this.gatherListInfo(id)
+                }
+            })
+        }
+
+        gatherListInfo=(id)=>{
             return this.props.usersInfo.users.map((user)=>{
                         if(id === user.id){
-                            return this.props.setFriendsInfo(user)
-                            // console.log(user)
+                            // return this.props.setFriendsInfo(user)
+                            console.log(user)
                         } 
                     })
         }  
