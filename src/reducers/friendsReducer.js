@@ -1,5 +1,5 @@
 function friendsReducer(state={
-    friends:[],
+    friends:{}
 },
 action){
 console.log(action)
