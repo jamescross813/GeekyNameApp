@@ -27,31 +27,7 @@ class GroupInputContainer extends Component{
             .then((r) => r.json())
             .then(data=>console.log(data))
             .then(this.props.history.push("/groups"))
-    }
-
-    componentDidMount=()=>{
-        return(
-            this.props.friendsInfo.friends.map((friend)=>{
-                if(friend.user_id === this.props.userInfo.user.id) {
-                    return this.gatherListInfo(friend.friend_user_id)
-                }           
-            })  
-        )
-    }
-
-    gatherListInfo=(id)=>{
-        return(
-            this.props.usersInfo.users.map((user)=>{
-                if(id === user.id){
-                    return(
-                        this.setState(prevState=>({
-                            friends: [...prevState.friends, user]
-                        })
-                    )
-                    )} 
-            })
-        )
-    }   
+    }  
 
     render(){
         return(
