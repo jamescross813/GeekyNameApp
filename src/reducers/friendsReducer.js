@@ -1,12 +1,12 @@
 function friendsReducer(state={
-    friends:{},
+    friends:[],
 },
 action){
-    console.log(action.friendData)
+
     switch(action.type){
         case "ADD_FRIEND":
             return{
-                friends: action.friendData
+                friends: [...state, action.friendData]
             }
             default:
                 return state
