@@ -8,8 +8,9 @@ class InfoContainer extends Component{
 
     redner(){
         <div>
-            <FriendsContainer />
+        
             <UsersContainer />
+            <FriendsContainer />
            
         </div>
     }
