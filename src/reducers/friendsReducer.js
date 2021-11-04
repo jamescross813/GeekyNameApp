@@ -2,7 +2,6 @@ function friendsReducer(state={
     friends:[]
 },
 action){
-console.log(action)
     switch(action.type){
         case "ADD_FRIEND":
             return{
@@ -11,6 +10,5 @@ console.log(action)
             default:
                 return state
     }
-    
 }
 export default friendsReducer
