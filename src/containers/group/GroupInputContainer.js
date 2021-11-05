@@ -12,7 +12,8 @@ class GroupInputContainer extends Component{
         let groupInfo = {
             group: {
                 group_name: formData.group_name,
-                user_id: this.props.userInfo.user.id
+                user_id: this.props.userInfo.user.id,
+                friend_info: formData.friends
             },
           }
           let configObj = {
