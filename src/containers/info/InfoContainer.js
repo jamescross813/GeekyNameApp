@@ -3,6 +3,7 @@ import FriendsContainer from "../friend/FriendsContainer";
 import UsersContainer from "../user/UsersContainer";
 import {Link} from "react-router-dom"
 import UserHomepageContainer from "../user/UserHomepageContainer";
+import GroupsContainer from "../group/GroupsContainer";
 
 class InfoContainer extends Component{
 
@@ -11,6 +12,7 @@ class InfoContainer extends Component{
             <div>
                 
                 <FriendsContainer />
+                <GroupsContainer />
                 <UserHomepageContainer />
             </div>
         )
