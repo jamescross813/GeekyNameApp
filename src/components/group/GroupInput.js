@@ -1,4 +1,5 @@
 import { Component } from "react";
+import uuid from "uuid"
 
 class GroupInput extends Component{
 
@@ -18,12 +19,19 @@ class GroupInput extends Component{
         this.props.handleCreate(this.state)
     }
 
+    renderFriends=()=>{
+       return this.props.friendsInfo.map((friend)=>{
+            return <input type="checkbox" name={friend.username} key={uuid()}/>
+        })
+    }
+
     render(){
         // console.log(this.props)
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>Group Name:</label>
                 <input type="text" name="group_name" value={this.state.group_name} onChange={this.handleChange} /><br/>
+                {this.renderFriends()}
                 <input type="submit"/>
             </form>
         )

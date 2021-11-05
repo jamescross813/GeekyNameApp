@@ -32,7 +32,7 @@ class GroupInputContainer extends Component{
     render(){
         return(
             <div>
-                <GroupInput handleCreate={this.createGroup} friends={this.state.friends}/>
+                <GroupInput handleCreate={this.createGroup} friendsInfo={this.props.friendsInfo.friends}/>
             </div>
         )
     }
