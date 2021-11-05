@@ -14,31 +14,31 @@ class GroupsContainer extends Component{
             groups: data
             })
         )
-        .then(this.gatherInfo())
+        // .then(this.gatherInfo())
     }
             
     gatherInfo=()=>{
-        // this.state.groups.map((group)=>{
-        //     return this.gatherListInfo(group.user_groups)
-        // console.log(this.state.groups)
-        //     }
-        // )     
+        // {console.log(this.state.groups)}
+        this.state.groups.map((group)=>{
+            return this.gatherListInfo(group.user_groups)
+            }
+        )     
     }
 
     gatherListInfo=(userGroup)=>{
-        // userGroup.map((group)=>{
-        //     if(group.user_id === this.props.userInfo.user.id){
-        //          return this.finalInfo(group.id)
-        //     }
-        // })
-        console.log("works here too")
+        userGroup.map((group)=>{
+            if(group.user_id === this.props.userInfo.user.id){
+                 return this.finalInfo(group.id)
+            }
+        })
+        
     }  
 
     finalInfo=(id)=>{
         return this.state.groups.map((group)=>{
                 if(group.id === id){
-                    return this.props.setGroupsInfo(group)
-                    // console.log(group)
+                    // return this.props.setGroupsInfo(group)
+                    console.log(group)
                 }
             })
     }
@@ -46,7 +46,8 @@ class GroupsContainer extends Component{
     render(){
         return(
         <div>
-            {console.log(this.state.groups)}
+            {this.gatherInfo()}
+            {/* {console.log(this.props)} */}
         </div>
         )
     }
