@@ -5,7 +5,7 @@ import {connect} from "react-redux"
 class GroupsListContainer extends Component{
 
     gatherList=()=>{
-        console.log(this.props.groupsInfo)
+        // console.log(this.props.groupsInfo)
         // return(
         //     this.props.groupsInfo.groups.map((group)=>{
         //         return <GroupsList GroupInfo={group} />
