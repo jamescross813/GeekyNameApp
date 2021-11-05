@@ -54,7 +54,7 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
     return {
-        setFriendsInfo: (group) => dispatch({
+        setGroupsInfo: (group) => dispatch({
           type: "ADD_GROUP",
           groupData: group
         })
