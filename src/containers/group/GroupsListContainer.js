@@ -12,8 +12,6 @@ class GroupsListContainer extends Component{
             })
         )
     }
-        
-    
 
     render(){
         return(
