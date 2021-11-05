@@ -1,5 +1,5 @@
 import { Component } from "react";
-import uuid from "uuid"
+import uuid from "uuid"; 
 
 class GroupInput extends Component{
 
