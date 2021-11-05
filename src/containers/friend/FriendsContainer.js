@@ -30,7 +30,7 @@ class FriendsContainer extends Component{
     render(){
         return(
         <div>
-            {console.log(this.props.friendsInfo.friends)}
+            
         </div>
         )
     }
