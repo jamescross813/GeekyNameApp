@@ -19,6 +19,7 @@ class GroupsListContainer extends Component{
         return(
         <div>
             {this.gatherList()}
+            {console.log(this.props.groupsInfo.groups)}
         </div>
         )
     }
