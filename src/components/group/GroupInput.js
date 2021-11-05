@@ -13,6 +13,10 @@ class GroupInput extends Component{
         })
       }
 
+      handleCheck=(event)=>{
+          console.log(event)
+      }
+
       handleSubmit = (event)=>{
         event.preventDefault()
         this.props.handleCreate(this.state)
@@ -21,7 +25,7 @@ class GroupInput extends Component{
     renderFriends=()=>{
        return this.props.friendsInfo.map((friend)=>{
            return(<label>
-            <input type="checkbox" name={friend.username} key={friend.username}/>
+            <input type="checkbox" name={friend.username} key={friend.username} onChange={this.handleCheck}/>
                 {friend.username} <br></br>
             </label>
             )
