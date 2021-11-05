@@ -14,7 +14,10 @@ class GroupInput extends Component{
       }
 
       handleCheck=(event)=>{
-          console.log(event)
+          this.setState({
+              friends: [...this.state.friends, event.target.name]
+          })
+        // console.log(event.target.name)
       }
 
       handleSubmit = (event)=>{
@@ -33,7 +36,7 @@ class GroupInput extends Component{
     }
 
     render(){
-        // console.log(this.props)
+        // console.log(this.state.friends)
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>Group Name:</label>
