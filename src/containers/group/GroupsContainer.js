@@ -10,23 +10,29 @@ class GroupsContainer extends Component{
     componentDidMount(){
         fetch("http://localhost:3000/groups")
         .then(resp=>resp.json())
-        // .then(data=>data.map((friend)=>{
-        //             if(friend.user_id === this.props.userInfo.user.id) {
-        //                 return this.gatherListInfo(friend.friend_user_id)
-        //             }
-        //         }
-        //     )
-        // )
-        .then(data=>console.log(data))
+        .then(data=>data.map((group)=>{
+                    this.gatherListInfo(group.user_groups)
+                    }
+            )
+        )
     }
 
-        gatherListInfo=(id)=>{
-            // return this.props.usersInfo.users.map((user)=>{
-            //             if(id === user.id){
-            //                 return this.props.setFriendsInfo(user)
-            //             } 
-            //         })
+        gatherListInfo=(userGroup)=>{
+            userGroup.map((group)=>{
+                if(group.user_id === this.props.userInfo.user.id){
+                    return this.finalInfo(group.id)
+                }
+            })
         }  
+        finalInfo=(id)=>{
+            return(
+                this.state.groups.map((group)=>{
+                    if(group.id === id){
+                        return 
+                    }
+                })
+            )
+        }
 
     render(){
         return(
