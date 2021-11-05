@@ -16,7 +16,8 @@ class EventsListContainer extends Component{
 const mapStateToProps=(state)=>{
     return{
         userInfo: state.userInfo,
-        usersInfo: state.usersInfo
+        usersInfo: state.usersInfo,
+        eventsInfo: state.eventsInfo
     }
 }
 
