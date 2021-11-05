@@ -10,35 +10,44 @@ class GroupsContainer extends Component{
     componentDidMount(){
         fetch("http://localhost:3000/groups")
         .then(resp=>resp.json())
-        .then(data=>data.map((group)=>{
-                    this.gatherListInfo(group.user_groups)
-                    }
-            )
+        .then(data=>this.setState({
+            groups: data
+            })
         )
     }
+            
+            
+    gatherInfo=()=>{
+        this.state.groups.map((group)=>{
+            this.gatherListInfo(group.user_groups)
+               }
+        )
+        
+    }
 
-        gatherListInfo=(userGroup)=>{
-            userGroup.map((group)=>{
-                if(group.user_id === this.props.userInfo.user.id){
-                    return this.finalInfo(group.id)
+    gatherListInfo=(userGroup)=>{
+        userGroup.map((group)=>{
+            if(group.user_id === this.props.userInfo.user.id){
+                 return this.finalInfo(group.id)
+            }
+        })
+    }  
+
+    finalInfo=(id)=>{
+        return(
+            this.state.groups.map((group)=>{
+                if(group.id === id){
+                    return this.props.setGroupsInfo(group)
                 }
             })
-        }  
-        finalInfo=(id)=>{
-            return(
-                this.state.groups.map((group)=>{
-                    if(group.id === id){
-                        // return 
-                        console.log(group)
-                    }
-                })
-            )
-        }
+        )
+    }
 
     render(){
         return(
         <div>
-            
+            {this.gatherInfo()}
+            {this.props.groupsInfo}
         </div>
         )
     }
