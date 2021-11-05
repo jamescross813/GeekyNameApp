@@ -45,7 +45,6 @@ class EventsContainer extends Component{
     render(){
         return(
             <div>
-                {console.log(this.props)}
             </div>
         )
     }
@@ -55,7 +54,6 @@ const mapStateToProps=(state)=>{
     return{
         userInfo: state.userInfo,
         usersInfo: state.usersInfo,
-        friendsInfo: state.friendsInfo,
         eventsInfo: state.eventsInfo
     }
 }
@@ -68,7 +66,6 @@ const mapDispatchToProps=(dispatch)=>{
         })
       };
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventsContainer)
 
