@@ -1,5 +1,4 @@
-import { Component } from "react";
-import uuid from "uuid"; 
+import { Component } from "react"; 
 
 class GroupInput extends Component{
 
@@ -21,7 +20,7 @@ class GroupInput extends Component{
 
     renderFriends=()=>{
        return this.props.friendsInfo.map((friend)=>{
-            return <input type="checkbox" name={friend.username} key={uuid()}/>
+            return <input type="checkbox" name={friend.username} key={friend.username}/>
         })
     }
 
