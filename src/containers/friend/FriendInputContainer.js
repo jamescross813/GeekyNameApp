@@ -24,16 +24,18 @@ class EventInputContainer extends Component{
             .then((r) => r.json())
             .then(data=>this.newFriend(data))
             .then(this.props.history.push("/friends"))
-        }
+    }
 
 
-        newFriend = (friend)=>{
-            return this.props.usersInfo.users.map((user)=>{
-                        if(friend.friend_user_id === user.id){
-                            return this.props.setFriendsInfo(user)
-                        } 
-                    })
-        }  
+    newFriend = (friend)=>{
+        return this.props.usersInfo.users.map((user)=>{
+                if(friend.friend_user_id === user.id){
+                    return this.props.setFriendsInfo(user)
+                 } 
+            }
+        )
+    }  
+
     render(){
         return(
             <div>
