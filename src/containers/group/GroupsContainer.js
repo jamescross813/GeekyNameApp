@@ -28,7 +28,8 @@ class GroupsContainer extends Component{
             return(
                 this.state.groups.map((group)=>{
                     if(group.id === id){
-                        return 
+                        // return 
+                        console.log(group)
                     }
                 })
             )
