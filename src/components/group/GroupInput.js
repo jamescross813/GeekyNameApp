@@ -20,7 +20,11 @@ class GroupInput extends Component{
 
     renderFriends=()=>{
        return this.props.friendsInfo.map((friend)=>{
-            return <input type="checkbox" name={friend.username} key={friend.username}/>
+           return(<label>
+            <input type="checkbox" name={friend.username} key={friend.username}/>
+                {friend.username} <br></br>
+            </label>
+            )
         })
     }
 
