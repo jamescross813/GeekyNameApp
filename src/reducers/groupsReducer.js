@@ -2,6 +2,7 @@ function groupsReducer(state={
     groups:[]
 },
 action){
+    console.log(action.groupData)
     switch(action.type){
         case "ADD_GROUP":
             return{
