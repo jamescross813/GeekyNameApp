@@ -3,6 +3,14 @@ import EventsList from "../../components/event/EventsList";
 import {connect} from "react-redux"
 
 class EventsListContainer extends Component{
+
+    gatherList=()=>{
+        return(
+            this.props.eventsInfo.events.map((event)=>{
+                return <EventsList eventInfo={event} />
+            })
+        )
+    }
     
     render(){
         return(   
