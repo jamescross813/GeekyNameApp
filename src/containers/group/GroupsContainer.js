@@ -14,11 +14,11 @@ class GroupsContainer extends Component{
             groups: data
             })
         )
-        // .then(this.gatherInfo())
+        .then(data=>this.gatherInfo(data))
     }
             
-    gatherInfo=()=>{
-        // {console.log(this.state.groups)}
+    gatherInfo=(data)=>{
+        // console.log(this.state.groups)
         this.state.groups.map((group)=>{
             return this.gatherListInfo(group.user_groups)
             }
@@ -30,25 +30,22 @@ class GroupsContainer extends Component{
             if(group.user_id === this.props.userInfo.user.id){
                  return this.finalInfo(group.id)
             }
-        })
-        
+        }) 
     }  
 
     finalInfo=(id)=>{
         return this.state.groups.map((group)=>{
                 if(group.id === id){
                     return this.props.setGroupsInfo(group)
-                    // console.log(group)
                 }
-            })
+            }
+        )
     }
 
     render(){
         return(
-        <div>
-            {this.gatherInfo()}
-            {/* {console.log(this.props)} */}
-        </div>
+            <div>
+            </div>
         )
     }
 }
@@ -70,8 +67,6 @@ const mapDispatchToProps=(dispatch)=>{
         })
       };
 }
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupsContainer)
 
