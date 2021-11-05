@@ -33,14 +33,12 @@ class GroupsContainer extends Component{
     }  
 
     finalInfo=(id)=>{
-        return(
-            this.state.groups.map((group)=>{
+        return this.state.groups.map((group)=>{
                 if(group.id === id){
                     return this.props.setGroupsInfo(group)
                     // console.log(group)
                 }
             })
-        )
     }
 
     render(){
