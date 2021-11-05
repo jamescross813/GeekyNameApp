@@ -16,7 +16,6 @@ class GroupsContainer extends Component{
         )
     }
             
-            
     gatherInfo=()=>{
         this.state.groups.map((group)=>{
             this.gatherListInfo(group.user_groups)
@@ -45,7 +44,6 @@ class GroupsContainer extends Component{
         return(
         <div>
             {this.gatherInfo()}
-            {console.log(this.props)}
         </div>
         )
     }
