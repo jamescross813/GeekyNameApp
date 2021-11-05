@@ -24,9 +24,12 @@ class EventInputContainer extends Component{
           };
           fetch("http://localhost:3000/events", configObj)
             .then((r) => r.json())
-            .then(data=>console.log(data))
+            .then(data=>this.newEvent(data))
             .then(this.props.history.push("/events"))
-            
+    }
+
+    newEvent=(event)=>{
+        console.log(event)
     }
 
     render(){
