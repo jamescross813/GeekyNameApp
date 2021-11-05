@@ -9,7 +9,7 @@ class InfoContainer extends Component{
     render(){
         return(
             <div>
-                <UsersContainer />
+                
                 <FriendsContainer />
                 <UserHomepageContainer />
             </div>
