@@ -21,6 +21,10 @@ class EventInput extends Component{
           this.props.handleCreate(this.state)
       }
 
+      renderGroups=()=>{
+          
+      }
+
     render(){
         return(
             <form onSubmit={this.handleSubmit}>
