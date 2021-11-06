@@ -1,5 +1,5 @@
 body {
-  background-color: darkslategray;
+  background-color: rgb(15, 98, 19);
   color: white;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -36,5 +36,9 @@ body {
 .homepageNavBar a{
   color:white;
   margin: 10px;
+}
+
+body a{
+  color: grey;
 }
 
