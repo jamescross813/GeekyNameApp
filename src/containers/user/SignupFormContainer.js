@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import UserHomepageContainer from "./UserHomepageContainer";
 import { connect } from 'react-redux';
 import SignupForm from "../../components/user/LoginForm";
+import InfoContainer from "../info/InfoContainer";
 
 class SignupFormContainer extends Component {
 
@@ -23,8 +24,9 @@ class SignupFormContainer extends Component {
                 };
                 fetch("http://localhost:3000/users", configObj)
                   .then((r) => r.json())
-                  .then(data=> this.props.setUserInfo(data))   
-                  .then(this.props.history.push("/homepage"))
+                  .then(data=> this.props.setUserInfo(data))
+                  .then(<InfoContainer/>)   
+                  .then(this.props.history.push("/user"))
     }
 
     render() {  

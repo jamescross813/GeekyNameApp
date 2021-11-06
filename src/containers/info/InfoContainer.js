@@ -15,7 +15,7 @@ class InfoContainer extends Component{
                 <FriendsContainer />
                 <GroupsContainer />
                 <EventsContainer />
-                <UserHomepageContainer />
+                {/* <UserHomepageContainer /> */}
             </div>
         )
     }
