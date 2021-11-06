@@ -29,7 +29,7 @@ class EventInputContainer extends Component{
     }
 
     newEvent=(event)=>{
-        console.log(event)
+        return this.props.setEventsInfo(event)
     }
 
     render(){
@@ -45,4 +45,13 @@ const mapStateToProps=(state)=>{
     return{userInfo: state.userInfo}
 }
 
-export default connect(mapStateToProps)(EventInputContainer)
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        setEventsInfo: (events) => dispatch({
+          type: "ADD_EVENT",
+          eventData: events
+        })
+      };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EventInputContainer)
