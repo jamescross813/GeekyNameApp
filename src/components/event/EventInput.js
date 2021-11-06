@@ -22,7 +22,7 @@ class EventInput extends Component{
       }
 
       renderGroups=()=>{
-          
+          console.log(this.props.groupsInfo)
       }
 
     render(){
