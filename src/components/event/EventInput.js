@@ -18,7 +18,7 @@ class EventInput extends Component{
 
     handleChange = (event) =>{
         this.setState({
-            ...this.state,
+            
           [event.target.name]: event.target.value
         })
     }
