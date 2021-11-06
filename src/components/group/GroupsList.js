@@ -15,8 +15,8 @@ class GroupsList extends Component{
             <ul>
                 <li>
                 <Link key={this.props.group_id} to={`/groups/${this.props.group_id}`}>
-        {this.props.groupInfo.group_name}
-        </Link>
+                    {this.props.groupInfo.group_name}
+                </Link>
                 </li>
             </ul>
         </div>
