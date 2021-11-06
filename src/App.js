@@ -35,7 +35,6 @@ class App extends Component {
           <Route to path="/event/add" render={routerprops=><EventInputContainer {...routerprops} />} /> 
           <Route to path="/friend/add" render={routerprops=><FriendInputContainer {...routerprops} />} /> 
           <Route to path="/group/add" render={routerprops=><GroupInputContainer {...routerprops} />} /> 
-
         </div>
       </Router>
       
