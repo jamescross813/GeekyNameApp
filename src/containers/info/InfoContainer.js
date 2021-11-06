@@ -11,7 +11,7 @@ class InfoContainer extends Component{
     render(){
         return(
             <div>
-                
+                {console.log(this.props)}
                 <FriendsContainer />
                 <GroupsContainer />
                 <EventsContainer />

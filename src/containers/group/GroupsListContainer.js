@@ -2,6 +2,7 @@ import { Component } from "react";
 import GroupsList from  "../../components/group/GroupsList"
 import {connect} from "react-redux"
 import { Route } from "react-router-dom";
+import GroupPageContainer from "./GroupPageContainer";
 
 class GroupsListContainer extends Component{
 
