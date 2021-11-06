@@ -25,8 +25,7 @@ class LoginFormContainer extends Component {
                 fetch("http://localhost:3000/login", configObj)
                   .then((r) => r.json())
                   .then(data=> this.props.setUserInfo(data)) 
-                  .then(<InfoContainer/>)   
-                  .then(this.props.history.push("/user"))
+                  .then(this.props.history.push("/homepage"))
     }
 
     render() {  
