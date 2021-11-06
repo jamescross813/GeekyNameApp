@@ -47,4 +47,13 @@ const mapStateToProps=(state)=>{
     }
 }
 
-export default connect(mapStateToProps)(GroupInputContainer)
+const mapDispatchToProps=(dispatch)=>{
+    return {
+        setGroupsInfo: (group) => dispatch({
+          type: "ADD_GROUP",
+          groupData: group
+        })
+      };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GroupInputContainer)
