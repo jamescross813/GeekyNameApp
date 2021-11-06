@@ -14,16 +14,22 @@ class EventInput extends Component{
             ...this.state,
           [event.target.name]: event.target.value
         })
-      }
+    }
 
-      handleSubmit = (event)=>{
+    handleSubmit = (event)=>{
           event.preventDefault()
           this.props.handleCreate(this.state)
-      }
+    }
 
-      renderGroups=()=>{
-          console.log(this.props.groupsInfo)
-      }
+    renderGroups=()=>{
+        return this.props.groupsInfo.groups.map((group)=>{
+            return(<label>
+                <input type="checkbox" name={group.group_name} key={group.group_name} onChange={this.handleCheck}/>
+                    {group.group_name}<br></br>
+            </label>
+            )
+        })
+    }
 
     render(){
         return(
@@ -36,6 +42,7 @@ class EventInput extends Component{
                 <input type="text" name="est_time" value={this.state.est_time} onChange={this.handleChange}/><br/>
                 <label>Game Type:</label>
                 <input type="text" name="game_type" value={this.state.game_type} onChange={this.handleChange}/><br/>
+                {this.renderGroups()}
                 <input type="submit"/>
             </form>
         )
