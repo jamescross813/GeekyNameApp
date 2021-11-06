@@ -1,6 +1,7 @@
 import { Component } from "react";
 import GroupsList from  "../../components/group/GroupsList"
 import {connect} from "react-redux"
+import { Route } from "react-router-dom";
 
 class GroupsListContainer extends Component{
 
@@ -16,6 +17,7 @@ class GroupsListContainer extends Component{
         return(
         <div>
             {this.gatherList()}
+            <Route path={`${match.url}/:movieId`} component={GroupPageContainer} />
         </div>
         )
     }
