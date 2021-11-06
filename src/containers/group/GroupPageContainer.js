@@ -4,7 +4,7 @@ class GroupPageContainer extends Component{
     render(){
         return(
             <div>
-                {this.props}
+                You are here
             </div>
         )
     }
