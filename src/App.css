@@ -28,6 +28,7 @@ body {
   background-color: cadetblue;
   padding: 0 20px;
   text-align: center;
+  background-position: center;
   /* position:absolute;
   left: 100px;
   top: 50px  */
@@ -36,6 +37,7 @@ body {
 .homepageNavBar a{
   color:white;
   margin: 10px;
+  position: center;
 }
 
 body a{
