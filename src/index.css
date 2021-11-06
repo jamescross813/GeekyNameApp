@@ -1,6 +1,7 @@
 header{
   background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-board-games-adults-1585587217.jpg?crop=1.00xw:0.770xh;0,0.00750xh&resize=1200:*");
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   height: 200px;
+  width: 845px;
 }
