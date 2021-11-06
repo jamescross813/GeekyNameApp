@@ -45,6 +45,7 @@ class EventsContainer extends Component{
     render(){
         return(
             <div>
+                
             </div>
         )
     }
@@ -53,8 +54,7 @@ class EventsContainer extends Component{
 const mapStateToProps=(state)=>{
     return{
         userInfo: state.userInfo,
-        usersInfo: state.usersInfo,
-        eventsInfo: state.eventsInfo
+        usersInfo: state.usersInfo
     }
 }
 
