@@ -17,7 +17,6 @@ class GroupInput extends Component{
           this.setState({
               friends: [...this.state.friends, event.target.name]
           })
-        // console.log(event.target.name)
       }
 
       handleSubmit = (event)=>{
