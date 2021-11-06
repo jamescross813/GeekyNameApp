@@ -35,14 +35,17 @@ class EventInputContainer extends Component{
     render(){
         return(
             <div>
-                <EventInput handleCreate={this.createEvent}/>
+                <EventInput handleCreate={this.createEvent} groupsInfo={this.props.groupsInfo} />
             </div>
         )
     }
 }
 
 const mapStateToProps=(state)=>{
-    return{userInfo: state.userInfo}
+    return{
+        userInfo: state.userInfo,
+        groupsInfo: state.groupsInfo
+    }
 }
 
 const mapDispatchToProps=(dispatch)=>{
