@@ -35,7 +35,6 @@ class GroupInput extends Component{
     }
 
     render(){
-        // console.log(this.state.friends)
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>Group Name:</label>
