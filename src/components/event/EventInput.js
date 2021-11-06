@@ -6,7 +6,14 @@ class EventInput extends Component{
         event_name: "",
         description: "",
         est_time: "",
-        game_type:""
+        game_type:"",
+        groups: []
+    }
+
+    handleCheck=(event)=>{
+        this.setState({
+            groups: [...this.state.groups, event.target.name]
+        })
     }
 
     handleChange = (event) =>{
