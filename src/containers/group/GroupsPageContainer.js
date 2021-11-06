@@ -5,7 +5,7 @@ class GroupsPageContainer extends Component{
     render(){
         return(
             <div>
-                <GroupsPage />
+                <GroupsPage routerprops={this.props.match}/>
             </div>
         )
     }
