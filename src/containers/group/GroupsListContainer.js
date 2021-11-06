@@ -17,7 +17,7 @@ class GroupsListContainer extends Component{
         return(
         <div>
             {this.gatherList()}
-            <Route path={`${match.url}/:movieId`} component={GroupPageContainer} />
+            <Route path={`${this.props.match.url}/:movieId`} component={GroupPageContainer} />
         </div>
         )
     }
