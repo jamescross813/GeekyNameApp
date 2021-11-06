@@ -6,9 +6,7 @@ class GroupsList extends Component{
 
     onClick=(event)=>{
         event.preventDefault()
-        return (
-            <GroupPageContainer groupInfo={this.props.groupInfo} />
-        )
+        return <GroupPageContainer groupInfo={this.props.groupInfo} />
     }
 
     render(){
@@ -16,9 +14,7 @@ class GroupsList extends Component{
         <div>
             <ul>
                 <li>
-                    <Link onClick={this.onClick}>
-                        {this.props.groupInfo.group_name}
-                    </Link>
+                    {this.props.groupInfo.group_name}
                 </li>
             </ul>
         </div>
