@@ -5,13 +5,15 @@ import {connect} from "react-redux"
 class EventInputContainer extends Component{
 
     createEvent=(formData)=>{
+        // console.log(formData.groups)
         let eventInfo = {
             event: {
                 event_name: formData.event_name,
                 description: formData.description,
                 est_time: formData.est_time,
                 game_type: formData.game_type,
-                user_id: this.props.userInfo.user.id
+                user_id: this.props.userInfo.user.id, 
+                group: formData.groups
             },
           }
           let configObj = {
