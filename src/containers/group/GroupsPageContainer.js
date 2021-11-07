@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Route } from "react-router-dom";
 import GroupsPage from "../../components/group/GroupsPage"
 import GroupPage from "../../components/group/GroupPage"
+import {connect} from "react-redux"
 
 class GroupsPageContainer extends Component{
     render(){
@@ -15,4 +16,8 @@ class GroupsPageContainer extends Component{
     }
 }
 
-export default GroupsPageContainer
+const mapStateToProps=(state)=>{
+    return{groupsInfo: state.groupsInfo}
+}
+
+export default connect(mapStateToProps)(GroupsPageContainer)
