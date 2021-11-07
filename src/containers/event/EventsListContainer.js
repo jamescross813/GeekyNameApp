@@ -7,7 +7,7 @@ class EventsListContainer extends Component{
     gatherList=()=>{
         return(
             this.props.eventsInfo.events.map((event)=>{
-                return <EventsList eventInfo={event} />
+                return <EventsList eventInfo={event} key={event.event_name}/>
             })
         )
     }
