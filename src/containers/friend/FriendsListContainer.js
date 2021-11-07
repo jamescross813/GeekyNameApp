@@ -17,7 +17,7 @@ class FriendsListContainer extends Component{
                 <div>
                    {this.gatherList()}
                 </div>
-                )
+            )
         }
     }
 
