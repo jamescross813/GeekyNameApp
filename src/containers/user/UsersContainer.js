@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { connect } from "react-redux"
+import { fetchUsers } from "../../actions/fetchUsers"
 
 class UsersContainer extends Component{
 
