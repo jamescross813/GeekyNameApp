@@ -38,7 +38,7 @@ class GroupPage extends Component {
                 {this.friendInfo()}
                 <h4>Events</h4>
                 {this.eventInfo()}
-                {/* {console.log(this.props.friendsInfo.friends)} */}
+                {/* {console.log(this.props)} */}
             </div>
         )
     }
