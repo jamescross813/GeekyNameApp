@@ -1,7 +1,7 @@
 import { Component } from "react";
 import FriendInput from "../../components/friend/FriendInput"
 import {connect} from "react-redux"
-import FriendsContainer from "./FriendsContainer";
+// import FriendsContainer from "./FriendsContainer";
 
 class EventInputContainer extends Component{
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
-import UserHomepageContainer from "../../containers/user/UserHomepageContainer";
-import { connect } from 'react-redux';
+// import { Link } from "react-router-dom"
+// import UserHomepageContainer from "../../containers/user/UserHomepageContainer";
+// import { connect } from 'react-redux';
 
 
 class LoginForm extends Component {

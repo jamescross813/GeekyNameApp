@@ -1,8 +1,8 @@
 import { Component } from "react";
-import { Link } from "react-router-dom"
-import InfoContainer from "../../containers/info/InfoContainer";
+// import { Link } from "react-router-dom"
+// import InfoContainer from "../../containers/info/InfoContainer";
 import HomepageNavBar from "../navbar/HomepageNavBar";
-import LoginForm from "../user/LoginForm"
+// import LoginForm from "../user/LoginForm"
 
 class Homepage extends Component{
 

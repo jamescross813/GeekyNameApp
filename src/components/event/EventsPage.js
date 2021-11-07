@@ -1,5 +1,5 @@
 import React from "react";
-import EventInputContainer from "../../containers/event/EventInputContainer";
+// import EventInputContainer from "../../containers/event/EventInputContainer";
 import EventsListContainer from "../../containers/event/EventsListContainer";
 import { Link } from "react-router-dom";
 
