@@ -3,30 +3,21 @@ import {connect} from "react-redux"
 import GroupPage from "../../components/group/GroupPage"
 
 class GroupPageContainer extends Component{
-
+    
     findGroup=()=>{
         let params = this.props.match.params.groupId
         return this.props.groupsInfo.groups.map((group)=>{
             if(group.id == params){
-              return(
-              this.renderGroup(group)
-              )
+             return <GroupPage groupInfo={group} />
+            // console.log(group)
             }
         })
-    }
-
-    renderGroup=(group)=>{
-        return <GroupPage groupInfo={group} />
-    }
-
-    renderFriendList=(group)=>{
-        console.log(group)
     }
 
     render(){
         return(
             <div>
-                {this.findGroup()}
+               {this.findGroup()}
             </div>
         )
     }
