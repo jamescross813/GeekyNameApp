@@ -17,18 +17,26 @@ class GroupPage extends Component {
     }
 
     eventInfo=()=>{
-        return this.props.groupInfo.group_events.map((event)=>{
-            return this.renderEvents(event.event_id)
-        })  
+        return this.props.eventsInfo.events.map((event)=>{
+            event.group_events.map((groupEvent)=>{
+                if(groupEvent.group_id == this.props.groupInfo.id){
+                   return this.renderEvents(groupEvent.event_id)
+                }
+                
+            })
+        })
     }
 
     renderEvents=(eventId)=>{
         return this.props.eventsInfo.events.map((event)=>{
-            if(event.id === eventId ){
-                return <li>{event.event_name}</li>
+            if(event.id === eventId){
+                // return <li>{event.event_name}</li>
+                console.log(event.event_name)
             }
         })
     }
+
+    
     
     render(){
         return(
@@ -36,9 +44,9 @@ class GroupPage extends Component {
                 <h2>{this.props.groupInfo.group_name}</h2>
                     <h4>Friends</h4>
                         {this.friendInfo()}
-                    {/* <h4>Events</h4>
-                        {this.eventInfo()} */}
-                        {console.log(this.props)}
+                    <h4>Events</h4>
+                        {this.eventInfo()} 
+
             </div>
         )
     }
