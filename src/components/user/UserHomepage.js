@@ -6,14 +6,18 @@ class UserHomepage extends Component{
         return(
         <div>
             <h2>Welcome {this.props.userInfo.username}!</h2>
-                <h3>My Events</h3>
-                    <Link to= "/events">></Link>
-                   
-                <h3>My Friends</h3>
-                    <Link to= "/friends">></Link>
-                   
-                <h3>My Groups</h3>
-                    <Link to= "/groups">></Link>
+                
+                    <Link to= "/events">
+                        <h3>My Events</h3>
+                    </Link>
+               
+                    <Link to= "/friends">
+                        <h3>My Friends
+                    </h3></Link>
+                
+                    <Link to= "/groups">
+                        <h3>My Groups</h3>
+                    </Link>
                 
         </div>
         )
