@@ -4,10 +4,10 @@ import GroupPageContainer from "./GroupPage"
 
 class GroupsList extends Component{
 
-    onClick=(event)=>{
-        event.preventDefault()
-        return <GroupPageContainer groupInfo={this.props.groupInfo} />
-    }
+    // onClick=(event)=>{
+    //     event.preventDefault()
+    //     return <GroupPageContainer groupInfo={this.props.groupInfo} />
+    // }
 
     render(){
         return(

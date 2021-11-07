@@ -9,7 +9,7 @@ class GroupsListContainer extends Component{
     gatherList=()=>{
         return(
             this.props.groupsInfo.groups.map((group)=>{
-                return <GroupsList groupInfo={group} />
+                return <GroupsList groupInfo={group} routerprops={this.props.routerprops} />
             })
         )
     }
@@ -18,7 +18,8 @@ class GroupsListContainer extends Component{
         return(
         <div>
             {this.gatherList()}
-        <Route path={`${this.props.routerprops.url}/:group_id`} render={()=><GroupPageContainer/>} />
+        
+        
         
         </div>
         )
