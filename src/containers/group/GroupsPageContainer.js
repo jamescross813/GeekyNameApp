@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Route } from "react-router-dom";
 import GroupsPage from "../../components/group/GroupsPage"
-import GroupPage from "../../components/group/GroupPage"
+import GroupPageContainer from "./GroupPageContainer"
 import {connect} from "react-redux"
 
 class GroupsPageContainer extends Component{
@@ -9,8 +9,7 @@ class GroupsPageContainer extends Component{
         return(
             <div>
                 <GroupsPage />
-                <Route path={`${this.props.match.url}/:groupId`} render={(routerProps) =><GroupPage />} />
-                {console.log(this.props)}
+                <Route path={`${this.props.match.url}/:groupId`} render={(routerProps) =><GroupPageContainer groupInfo={this.props.groupsInfo}/>} />
             </div>
         )
     }
