@@ -7,7 +7,7 @@ class FriendsListContainer extends Component{
         gatherList=()=>{
             return(
                 this.props.friendsInfo.friends.map((friend)=>{
-                    return <FriendsList friendInfo={friend} />
+                    return <FriendsList friendInfo={friend} key={friend.username} />
                 })
             )
         }   
