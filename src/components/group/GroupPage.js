@@ -1,12 +1,15 @@
-import React from "react";
+import {Component} from "react";
 
-const GroupPage = ({groupInfo})=>{
-    return(
-        <div>
-            <h2>{groupInfo.group_name}</h2>
-            {/* <li>{groupInfo.friend</li> */}
-        </div>
-    )
+class GroupPage extends Component {
+    
+    render(){
+        return(
+            <div>
+                <h2>{this.props.groupInfo.group_name}</h2>
+                {/* <li>{groupInfo.friend</li> */}
+            </div>
+        )
+    }
 }
 
 export default GroupPage
