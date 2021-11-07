@@ -4,7 +4,7 @@ class GroupPageContainer extends Component{
     render(){
         return(
             <div>
-                You are here
+                {console.log("You are here")}
             </div>
         )
     }
