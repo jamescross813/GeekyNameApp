@@ -1,8 +1,5 @@
 import { Component } from "react";
-// import EventsListContainer from "../../containers/event/EventsListContainer"
-// import FriendsListContainer from "../../containers/friend/FriendsListContainer"
-// import GroupsListContainer from "../../containers/group/GroupsListContainer"
-
+import {Link} from "react-router-dom"
 
 class UserHomepage extends Component{
     render(){
@@ -10,11 +7,14 @@ class UserHomepage extends Component{
         <div>
             <h2>Welcome {this.props.userInfo.username}!</h2>
                 <h3>My Events</h3>
-                    {/* <EventsListContainer /> */}
+                    <Link to= "/events">></Link>
+                   
                 <h3>My Friends</h3>
-                    {/* <FriendsListContainer /> */}
+                    <Link to= "/friends">></Link>
+                   
                 <h3>My Groups</h3>
-                    {/* <GroupsListContainer /> */}
+                    <Link to= "/groups">></Link>
+                }
         </div>
         )
     }
