@@ -1,4 +1,4 @@
-import {Component} from "react";
+import { Component } from "react";
 
 class GroupPage extends Component {
 
@@ -22,28 +22,25 @@ class GroupPage extends Component {
                 if(groupEvent.group_id == this.props.groupInfo.id){
                    return this.renderEvents(groupEvent.event_id)
                 }
-                
             })
         })
     }
 
-    renderEvents=(eventId)=>{
-        return this.props.eventsInfo.events.map((event)=>{
+    renderEvents=(eventId)=>(
+        this.props.eventsInfo.events.map((event)=>{
             if(event.id === eventId){
-                return <li>{event.event_name}</li>
-                // console.log(event.event_name)
+                // return <li>{event.event_name}</li>
+                console.log(event.event_name)
             }
         })
-    }
-
-    
+    )
     
     render(){
         return(
             <div>
                 <h2>{this.props.groupInfo.group_name}</h2>
                     <h4>Friends</h4>
-                        {this.friendInfo()}
+                        {/* {this.friendInfo()} */}
                     <h4>Events</h4>
                         {this.eventInfo()}
 
