@@ -10,7 +10,7 @@ class GroupPage extends Component {
 
     renderFriends(friendId){
         return this.props.friendsInfo.friends.map((friend)=>{
-            if(friend.id === friendId ){
+            if(friend.id === friendId){
                 return <li>{friend.username}</li>
             }
         })
@@ -28,9 +28,9 @@ class GroupPage extends Component {
 
     renderEvents(eventId){
         return this.props.eventsInfo.events.map((event)=>{
-            if(event.id === eventId ){
-                // return <p>{event.event_name}</p>
-                console.log(event.event_name)
+            if(event.id === eventId){
+                return <li>{event.event_name}</li>
+                // console.log(event.event_name)
             }
         })
     }
@@ -43,7 +43,6 @@ class GroupPage extends Component {
                         {this.friendInfo()}
                     <h4>Events</h4>
                         {this.eventInfo()}
-
             </div>
         )
     }
