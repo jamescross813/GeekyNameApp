@@ -1,5 +1,3 @@
-// links to events, friends, log out, groups
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
