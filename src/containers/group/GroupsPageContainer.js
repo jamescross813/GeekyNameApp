@@ -9,6 +9,7 @@ class GroupsPageContainer extends Component{
             <div>
                 <GroupsPage routerProps={this.props.match}/>
                 <Route path={`${this.props.match.url}/:groupId`} render={(routerProps) =><GroupPage {...routerProps} />} />
+                {console.log(this.props)}
             </div>
         )
     }

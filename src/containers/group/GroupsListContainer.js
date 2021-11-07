@@ -7,7 +7,7 @@ class GroupsListContainer extends Component{
     renderGroup=()=>{
         return(
             this.props.groupsInfo.groups.map((group)=>{
-                return <GroupsList key={group.group_name} groupInfo={group} routerProps={this.props.routerProps} />
+                return <GroupsList key={group.group_name} groupInfo={group}/>
             })
         )
     }
