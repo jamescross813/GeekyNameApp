@@ -9,7 +9,7 @@ class GroupsListContainer extends Component{
     gatherList=()=>{
         return(
             this.props.groupsInfo.groups.map((group)=>{
-                return <GroupsList groupInfo={group} routerprops={this.props.routerprops} />
+                return <GroupsList key={group.group_name} groupInfo={group} routerprops={this.props.routerprops} />
             })
         )
     }
