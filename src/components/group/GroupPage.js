@@ -18,7 +18,7 @@ class GroupPage extends Component {
 
     eventInfo(){
         return this.props.eventsInfo.events.map((event)=>{
-            event.group_events.map((groupEvent)=>{
+            return event.group_events.map((groupEvent)=>{
                if(groupEvent.group_id === this.props.groupInfo.id){
                    return this.renderEvents(groupEvent.event_id)
                 }
@@ -29,8 +29,8 @@ class GroupPage extends Component {
     renderEvents(eventId){
         return this.props.eventsInfo.events.map((event)=>{
             if(event.id === eventId){
-                return <li>{event.event_name}</li>
-                // console.log(event.event_name)
+                // return <li>{event.event_name}</li>
+                console.log(event.event_name)
             }
         })
     }
