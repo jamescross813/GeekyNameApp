@@ -9,7 +9,6 @@ class GroupPageContainer extends Component{
         return this.props.groupsInfo.groups.map((group)=>{
             if(group.id == params){
              return <GroupPage groupInfo={group} />
-            // console.log(group)
             }
         })
     }
