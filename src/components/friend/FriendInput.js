@@ -21,7 +21,7 @@ class FormInput extends Component{
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>Username:</label>
-                <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /><br/>
+                    <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /><br/>
                 <input type="submit"/>
             </form>
         )
