@@ -8,7 +8,7 @@ class GroupPageContainer extends Component{
         let params = this.props.match.params.groupId
         return this.props.groupsInfo.groups.map((group)=>{
             if(group.id == params){
-             return <GroupPage groupInfo={group} />
+             return <GroupPage groupInfo={group} friendsInfo={this.props.friendsInfo} />
             }
         })
     }
