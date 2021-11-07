@@ -1,13 +1,11 @@
-import {Component} from "react";
+import React from "react";
 
-class GroupPageContainer extends Component{
-    render(){
+const GroupPageContainer =()=> {
         return(
             <div>
                 You are here
             </div>
         )
-    }
 }
 
 export default GroupPageContainer
