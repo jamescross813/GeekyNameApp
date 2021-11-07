@@ -29,8 +29,8 @@ class GroupPage extends Component {
     renderEvents(eventId){
         return this.props.eventsInfo.events.map((event)=>{
             if(event.id === eventId){
-                // return <li>{event.event_name}</li>
-                console.log(event.event_name)
+                return <li>{event.event_name}</li>
+                // console.log(event.event_name)
             }
         })
     }

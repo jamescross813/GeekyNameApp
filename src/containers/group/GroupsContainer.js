@@ -25,7 +25,7 @@ class GroupsContainer extends Component{
     }
 
     gatherListInfo=(userGroup)=>{
-        userGroup.map((group)=>{
+        return userGroup.map((group)=>{
             if(group.user_id === this.props.userInfo.user.id){
                  return this.finalInfo(group.id)
             }
