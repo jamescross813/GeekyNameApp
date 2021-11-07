@@ -17,7 +17,7 @@ class GroupsListContainer extends Component{
     render(){
         return(
         <div>
-            <Route path={`${this.props.routerprops.url}/:group_id`} render={()=><GroupPageContainer />} />
+            <Route path={`${this.props.routerprops.url}/:group_id`} component={GroupPageContainer} />
             {this.gatherList()}
         </div>
         )
