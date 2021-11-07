@@ -16,9 +16,19 @@ class GroupPage extends Component {
         })
     }
 
-    // eventInfo=()=>{
+    eventInfo=()=>{
+        return this.props.groupInfo.group_events.map((event)=>{
+            return this.renderEvents(event.event_id)
+        })  
+    }
 
-    // }
+    renderEvents=(eventId)=>{
+        return this.props.eventsInfo.events.map((event)=>{
+            if(event.id === eventId ){
+                return <li>{event.event_name}</li>
+            }
+        })
+    }
     
     render(){
         return(
@@ -27,6 +37,7 @@ class GroupPage extends Component {
                 <h4>Friends</h4>
                 {this.friendInfo()}
                 <h4>Events</h4>
+                {this.eventInfo()}
                 {/* {console.log(this.props.friendsInfo.friends)} */}
             </div>
         )
