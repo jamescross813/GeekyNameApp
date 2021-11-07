@@ -5,7 +5,7 @@ action){
     switch(action.type){
         case "ADD_USERS":
             return{
-                users: action.userData
+                users: action.data
             }
             default:
                 return state
