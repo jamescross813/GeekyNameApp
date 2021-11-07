@@ -3,8 +3,8 @@ import React from "react";
 const GroupPage = ({groupInfo})=>{
     return(
         <div>
-            <h2>GroupPage</h2>
-            {console.log(groupInfo)}
+            <h2>{groupInfo.group_name}</h2>
+            {/* <li>{groupInfo.friend</li> */}
         </div>
     )
 }
