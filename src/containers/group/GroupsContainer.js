@@ -18,7 +18,6 @@ class GroupsContainer extends Component{
     }
             
     gatherInfo=(data)=>{
-        // console.log(this.state.groups)
         this.state.groups.map((group)=>{
             return this.gatherListInfo(group.user_groups)
             }
